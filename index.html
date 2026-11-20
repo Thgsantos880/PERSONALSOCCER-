@@ -1,0 +1,2347 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#09090B" id="meta-theme-color" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="THG PERFORMANCE" />
+  <title>THG PERFORMANCE • Evolua • Treine • Performe</title>
+
+  <!-- Google Fonts: Inter & Rajdhani for high-impact sports typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:ital,wght@0,600;0,700;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Dynamic Manifest Injection for PWA Installation -->
+  <script>
+    (function setupDynamicManifest() {
+      const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <defs>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFF0A8"/>
+            <stop offset="35%" stop-color="#F5C518"/>
+            <stop offset="70%" stop-color="#D4AF37"/>
+            <stop offset="100%" stop-color="#8A6612"/>
+          </linearGradient>
+          <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#18181B"/>
+            <stop offset="100%" stop-color="#050507"/>
+          </linearGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="105" fill="url(#darkBg)" stroke="url(#goldGrad)" stroke-width="18"/>
+        <circle cx="256" cy="235" r="185" fill="none" stroke="url(#goldGrad)" stroke-width="6" opacity="0.75"/>
+        <!-- Tactical Pitch Lines -->
+        <g stroke="#FFFFFF" stroke-width="3" opacity="0.22" fill="none">
+          <rect x="315" y="135" width="145" height="175" transform="rotate(-14 385 220)"/>
+          <circle cx="385" cy="222" r="24"/>
+          <path d="M345 190 L365 210 M365 190 L345 210 M415 240 L435 260 M435 240 L415 260"/>
+        </g>
+        <!-- Ascending Chart -->
+        <g fill="url(#goldGrad)">
+          <rect x="58" y="215" width="22" height="45" rx="3" opacity="0.55"/>
+          <rect x="90" y="195" width="22" height="65" rx="3" opacity="0.72"/>
+          <rect x="122" y="172" width="22" height="88" rx="3" opacity="0.88"/>
+          <rect x="154" y="148" width="22" height="112" rx="3"/>
+          <path d="M52 200 Q110 175 162 128 L145 124 L182 112 L175 148 L166 135 Q115 182 52 200 Z"/>
+        </g>
+        <!-- Runner Silhouette -->
+        <path d="M275 82 C292 82 304 95 301 112 C298 126 285 135 271 132 C257 129 249 116 252 102 C255 89 264 82 275 82 Z M232 138 L295 148 L338 122 L352 138 L302 178 L272 174 L256 212 L306 238 L286 285 L264 276 L278 246 L224 226 L184 265 L164 248 L210 198 L225 162 L178 168 L162 152 Z" fill="#E4E4E7" stroke="url(#goldGrad)" stroke-width="2.5"/>
+        <!-- THG Typography -->
+        <text x="256" y="346" font-family="Arial Black, sans-serif" font-weight="900" font-style="italic" font-size="112" text-anchor="middle" fill="#FFFFFF" letter-spacing="-3">TH<tspan fill="url(#goldGrad)">G</tspan></text>
+        <text x="256" y="392" font-family="Arial, sans-serif" font-weight="800" font-style="italic" font-size="40" text-anchor="middle" fill="#FFFFFF" letter-spacing="4">PERFORMANCE</text>
+        <line x1="65" y1="422" x2="220" y2="422" stroke="url(#goldGrad)" stroke-width="4"/>
+        <line x1="292" y1="422" x2="447" y2="422" stroke="url(#goldGrad)" stroke-width="4"/>
+        <circle cx="256" cy="422" r="18" fill="#FFFFFF" stroke="#111" stroke-width="3"/>
+        <polygon points="256,411 265,418 261,429 251,429 247,418" fill="#111"/>
+        <text x="256" y="464" font-family="Arial, sans-serif" font-weight="700" font-size="17" text-anchor="middle" fill="#F5C518" letter-spacing="4">EVOLUA • TREINE • PERFORME</text>
+      </svg>`;
+      const iconUrl = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgIcon)));
+      const manifest = {
+        name: "THG PERFORMANCE",
+        short_name: "THG PERF",
+        description: "Plataforma de Avaliação Física, Ciência do Esporte e Biblioteca Técnica — Evolua • Treine • Performe",
+        start_url: "./",
+        display: "standalone",
+        background_color: "#09090B",
+        theme_color: "#D4AF37",
+        orientation: "portrait",
+        icons: [
+          { src: iconUrl, sizes: "192x192", type: "image/svg+xml", purpose: "any maskable" },
+          { src: iconUrl, sizes: "512x512", type: "image/svg+xml", purpose: "any maskable" }
+        ]
+      };
+      const blob = new Blob([JSON.stringify(manifest)], { type: "application/manifest+json" });
+      const link = document.createElement("link");
+      link.rel = "manifest";
+      link.href = URL.createObjectURL(blob);
+      document.head.appendChild(link);
+    })();
+  </script>
+
+  <style>
+    /* Theme Design Tokens */
+    :root {
+      --bg-primary: #09090B;
+      --bg-secondary: #121216;
+      --bg-card: rgba(22, 22, 27, 0.88);
+      --bg-input: #18181F;
+      --border-subtle: rgba(212, 175, 55, 0.22);
+      --border-strong: rgba(245, 197, 24, 0.55);
+      --text-primary: #FAFAFA;
+      --text-secondary: #A1A1AA;
+      --text-muted: #71717A;
+      --accent-gold: #F5C518;
+      --accent-gold-dark: #B48A1E;
+      --accent-gold-bg: rgba(245, 197, 24, 0.12);
+      --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.75);
+      --nav-bg: rgba(12, 12, 15, 0.94);
+    }
+
+    html.theme-light {
+      --bg-primary: #F4F5F7;
+      --bg-secondary: #FFFFFF;
+      --bg-card: rgba(255, 255, 255, 0.96);
+      --bg-input: #F1F5F9;
+      --border-subtle: rgba(180, 138, 30, 0.25);
+      --border-strong: rgba(180, 138, 30, 0.65);
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --accent-gold: #B48A1E;
+      --accent-gold-dark: #8A6612;
+      --accent-gold-bg: rgba(180, 138, 30, 0.12);
+      --shadow-card: 0 8px 24px -8px rgba(15, 23, 42, 0.10);
+      --nav-bg: rgba(255, 255, 255, 0.95);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      transition: background-color 0.25s ease, color 0.25s ease;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .font-display {
+      font-family: 'Rajdhani', sans-serif;
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF0A8 0%, #F5C518 45%, #C99A1C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    html.theme-light .gold-gradient-text {
+      background: linear-gradient(135deg, #9A7214 0%, #C5961D 50%, #7C5808 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-btn {
+      background: linear-gradient(135deg, #F5C518 0%, #D4AF37 60%, #B48A1E 100%);
+      color: #09090B;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+      transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .gold-btn:hover {
+      filter: brightness(1.06);
+      box-shadow: 0 6px 20px rgba(245, 197, 24, 0.42);
+    }
+
+    .gold-btn:active {
+      transform: scale(0.97);
+    }
+
+    .thg-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(12px);
+    }
+
+    .thg-card-highlight {
+      border-color: var(--border-strong);
+    }
+
+    .thg-input {
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .thg-input:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 0 3px rgba(245, 197, 24, 0.16);
+    }
+
+    /* Custom Scrollbars */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.35);
+      border-radius: 999px;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-enter {
+      animation: fadeSlideUp 0.28s ease forwards;
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-24 md:pb-10">
+
+  <!-- Toast / Non-blocking Notification Banner -->
+  <div id="toast-container" class="fixed top-4 right-4 left-4 md:left-auto md:w-96 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Top App Header -->
+  <header class="sticky top-0 z-30 border-b backdrop-blur-xl" style="background: var(--nav-bg); border-color: var(--border-subtle);">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+      <!-- Brand Logo & Custom SVG Icon -->
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-2xl overflow-hidden flex-shrink-0 shadow-lg border border-amber-400/50 bg-black">
+          <!-- Custom THG PERFORMANCE Emblem SVG matching user artwork -->
+          <svg viewBox="0 0 200 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="hdrGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF2B2"/>
+                <stop offset="45%" stop-color="#F5C518"/>
+                <stop offset="100%" stop-color="#9A7214"/>
+              </linearGradient>
+              <linearGradient id="hdrDark" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1C1C22"/>
+                <stop offset="100%" stop-color="#050507"/>
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="192" height="192" rx="42" fill="url(#hdrDark)" stroke="url(#hdrGold)" stroke-width="7"/>
+            <circle cx="100" cy="92" r="74" fill="none" stroke="url(#hdrGold)" stroke-width="2.5" opacity="0.75"/>
+            <!-- Tactical field lines -->
+            <g stroke="#FFFFFF" stroke-width="1.5" opacity="0.24" fill="none">
+              <rect x="124" y="54" width="56" height="68" transform="rotate(-14 150 85)"/>
+              <circle cx="152" cy="88" r="10"/>
+              <path d="M135 74 L143 82 M143 74 L135 82 M162 96 L170 104 M170 96 L162 104"/>
+            </g>
+            <!-- Ascending performance bars & arrow -->
+            <g fill="url(#hdrGold)">
+              <rect x="22" y="86" width="8" height="18" rx="1.5" opacity="0.55"/>
+              <rect x="34" y="78" width="8" height="26" rx="1.5" opacity="0.72"/>
+              <rect x="46" y="69" width="8" height="35" rx="1.5" opacity="0.88"/>
+              <rect x="58" y="59" width="8" height="45" rx="1.5"/>
+              <path d="M20 80 Q44 70 63 50 L56 48 L72 43 L69 58 L65 53 Q46 73 20 80 Z"/>
+            </g>
+            <!-- Speed lines + Athlete silhouette -->
+            <g stroke="url(#hdrGold)" stroke-width="1.5" opacity="0.6">
+              <line x1="48" y1="54" x2="88" y2="54"/>
+              <line x1="42" y1="64" x2="84" y2="64"/>
+              <line x1="54" y1="74" x2="90" y2="74"/>
+            </g>
+            <path d="M112 31 C119 31 124 36 122 43 C121 49 116 53 110 51 C104 50 101 44 102 39 C104 34 107 31 112 31 Z M93 54 L119 58 L136 47 L142 54 L122 70 L110 68 L103 84 L123 95 L115 114 L106 110 L112 98 L90 90 L74 106 L65 99 L84 78 L90 64 L71 66 L64 59 Z" fill="#F4F4F5" stroke="url(#hdrGold)" stroke-width="1.2"/>
+            <!-- THG PERFORMANCE text -->
+            <text x="100" y="136" font-family="Arial Black, sans-serif" font-weight="900" font-style="italic" font-size="44" text-anchor="middle" fill="#FFFFFF" letter-spacing="-1">TH<tspan fill="url(#hdrGold)">G</tspan></text>
+            <text x="100" y="154" font-family="Arial, sans-serif" font-weight="800" font-style="italic" font-size="15.5" text-anchor="middle" fill="#FFFFFF" letter-spacing="1.5">PERFORMANCE</text>
+            <!-- Divider & Ball -->
+            <line x1="26" y1="166" x2="86" y2="166" stroke="url(#hdrGold)" stroke-width="2"/>
+            <line x1="114" y1="166" x2="174" y2="166" stroke="url(#hdrGold)" stroke-width="2"/>
+            <circle cx="100" cy="166" r="7.5" fill="#FFFFFF" stroke="#09090B" stroke-width="1.2"/>
+            <polygon points="100,161 104,164 102.5,169 97.5,169 96,164" fill="#09090B"/>
+            <text x="100" y="184" font-family="Arial, sans-serif" font-weight="700" font-size="6.8" text-anchor="middle" fill="#F5C518" letter-spacing="1.6">EVOLUA • TREINE • PERFORME</text>
+          </svg>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-1.5">
+            <h1 class="font-display font-bold text-xl sm:text-2xl tracking-wide leading-none">
+              TH<span class="gold-gradient-text">G</span> PERFORMANCE
+            </h1>
+            <span class="hidden sm:inline-block text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full border" style="background: var(--accent-gold-bg); border-color: var(--border-strong); color: var(--accent-gold);">
+              PRO SUITE
+            </span>
+          </div>
+          <p class="text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase mt-0.5" style="color: var(--accent-gold);">
+            EVOLUA • TREINE • PERFORME
+          </p>
+        </div>
+      </div>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1.5 p-1 rounded-2xl border" style="background: var(--bg-input); border-color: var(--border-subtle);">
+        <button onclick="switchTab('dashboard')" data-nav="dashboard" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Visão Geral
+        </button>
+        <button onclick="switchTab('avaliacoes')" data-nav="avaliacoes" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all">
+          <i data-lucide="activity" class="w-4 h-4"></i> Avaliações Físicas
+        </button>
+        <button onclick="switchTab('videos')" data-nav="videos" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all">
+          <i data-lucide="film" class="w-4 h-4"></i> Biblioteca MP4
+        </button>
+        <button onclick="switchTab('atletas')" data-nav="atletas" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all">
+          <i data-lucide="users" class="w-4 h-4"></i> Atletas & Relatórios
+        </button>
+      </nav>
+
+      <!-- Theme Switcher & Install PWA Button -->
+      <div class="flex items-center gap-2">
+        <button onclick="toggleTheme()" id="theme-toggle-btn" title="Alternar Tema" class="px-3 py-2 rounded-xl border text-xs font-semibold flex items-center gap-1.5 transition-all hover:opacity-90" style="background: var(--bg-input); border-color: var(--border-subtle); color: var(--text-primary);">
+          <i data-lucide="sun" id="theme-icon" class="w-4 h-4" style="color: var(--accent-gold);"></i>
+          <span id="theme-label" class="hidden sm:inline">Preto & Dourado</span>
+        </button>
+
+        <button onclick="openPwaModal()" title="Instalar App no Celular" class="p-2.5 rounded-xl border transition-all hover:opacity-90" style="background: var(--accent-gold-bg); border-color: var(--border-strong); color: var(--accent-gold);">
+          <i data-lucide="smartphone" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 pt-5 pb-8">
+
+    <!-- Active Athlete Context Bar (Always accessible) -->
+    <div class="thg-card rounded-2xl p-3.5 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center font-display font-bold text-lg" style="background: var(--accent-gold-bg); color: var(--accent-gold); border: 1px solid var(--border-strong);">
+          <i data-lucide="user-check" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="text-[11px] uppercase tracking-wider font-semibold block" style="color: var(--text-muted);">Atleta Selecionado</span>
+          <div class="flex flex-wrap items-center gap-2">
+            <select id="global-athlete-select" onchange="selectGlobalAthlete(this.value)" class="thg-input rounded-xl px-3 py-1.5 text-sm font-bold min-w-[200px]"></select>
+            <span id="global-athlete-meta" class="text-xs font-medium px-2.5 py-1 rounded-lg" style="background: var(--bg-input); color: var(--text-secondary);"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 self-end sm:self-center">
+        <button onclick="openNewAthleteModal()" class="px-3.5 py-2 rounded-xl text-xs font-bold border flex items-center gap-1.5 transition-all" style="background: var(--bg-input); border-color: var(--border-subtle); color: var(--text-primary);">
+          <i data-lucide="user-plus" class="w-3.5 h-3.5" style="color: var(--accent-gold);"></i> Novo Atleta
+        </button>
+        <button onclick="switchTab('avaliacoes')" class="gold-btn px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5">
+          <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i> Avaliar Agora
+        </button>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 1: DASHBOARD ==================== -->
+    <section id="tab-dashboard" class="tab-section animate-enter space-y-6">
+      <!-- KPI Stat Cards -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div class="thg-card rounded-2xl p-4 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold uppercase tracking-wider" style="color: var(--text-secondary);">Atletas Ativos</span>
+            <div class="p-2 rounded-xl" style="background: var(--accent-gold-bg); color: var(--accent-gold);">
+              <i data-lucide="users" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div id="kpi-athletes" class="font-display text-3xl sm:text-4xl font-bold">0</div>
+          <p class="text-xs mt-1" style="color: var(--text-muted);">Elenco monitorado</p>
+        </div>
+
+        <div class="thg-card rounded-2xl p-4 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold uppercase tracking-wider" style="color: var(--text-secondary);">Avaliações Feitas</span>
+            <div class="p-2 rounded-xl" style="background: var(--accent-gold-bg); color: var(--accent-gold);">
+              <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div id="kpi-evaluations" class="font-display text-3xl sm:text-4xl font-bold">0</div>
+          <p class="text-xs mt-1" style="color: var(--text-muted);">Registros salvos</p>
+        </div>
+
+        <div class="thg-card rounded-2xl p-4 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold uppercase tracking-wider" style="color: var(--text-secondary);">Protocolos</span>
+            <div class="p-2 rounded-xl" style="background: var(--accent-gold-bg); color: var(--accent-gold);">
+              <i data-lucide="layers" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div id="kpi-protocols" class="font-display text-3xl sm:text-4xl font-bold">15</div>
+          <p class="text-xs mt-1" style="color: var(--text-muted);">Testes + personalizados</p>
+        </div>
+
+        <div class="thg-card rounded-2xl p-4 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold uppercase tracking-wider" style="color: var(--text-secondary);">Vídeos MP4</span>
+            <div class="p-2 rounded-xl" style="background: var(--accent-gold-bg); color: var(--accent-gold);">
+              <i data-lucide="video" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div id="kpi-videos" class="font-display text-3xl sm:text-4xl font-bold">0</div>
+          <p class="text-xs mt-1" style="color: var(--text-muted);">Biblioteca offline MP4</p>
+        </div>
+      </div>
+
+      <!-- Main Grid: Performance Overview & Recent History -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <!-- Left 2 cols: Athlete Profile Summary & Category Breakdown -->
+        <div class="lg:col-span-2 space-y-5">
+          <div class="thg-card rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <h2 class="font-display text-xl font-bold tracking-wide">ÍNDICE DE PERFORMANCE POR CATEGORIA</h2>
+                <p class="text-xs" style="color: var(--text-secondary);">Resumo de avaliações concluídas para o atleta ativo</p>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full" style="background: var(--accent-gold-bg); color: var(--accent-gold);">
+                THG Analytics
+              </span>
+            </div>
+            <div id="dashboard-category-bars" class="space-y-3.5"></div>
+          </div>
+
+          <!-- Quick Shortcuts to Core Tests -->
+          <div class="thg-card rounded-2xl p-5">
+            <h3 class="font-display text-lg font-bold tracking-wide mb-3">ACESSO RÁPIDO ÀS AVALIAÇÕES</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="dashboard-quick-tests"></div>
+          </div>
+        </div>
+
+        <!-- Right 1 col: Recent Evaluations Feed -->
+        <div class="thg-card rounded-2xl p-5 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-display text-xl font-bold tracking-wide">ÚLTIMOS REGISTROS</h2>
+            <button onclick="switchTab('atletas')" class="text-xs font-semibold underline" style="color: var(--accent-gold);">Ver todos</button>
+          </div>
+          <div id="dashboard-recent-list" class="space-y-3 flex-1 overflow-y-auto max-h-[440px] pr-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 2: AVALIAÇÕES FÍSICAS ==================== -->
+    <section id="tab-avaliacoes" class="tab-section hidden animate-enter space-y-5">
+      <!-- Header + Add Custom Evaluation CTA -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-wide">AVALIAÇÕES FÍSICAS POR CATEGORIA</h2>
+          <p class="text-xs sm:text-sm" style="color: var(--text-secondary);">
+            Selecione um protocolo científico abaixo para calcular métricas automaticamente ou crie sua própria avaliação.
+          </p>
+        </div>
+
+        <button onclick="openCustomEvalBuilder()" class="gold-btn px-4 py-3 rounded-2xl text-sm flex items-center justify-center gap-2 flex-shrink-0">
+          <i data-lucide="plus" class="w-4 h-4"></i> Adicionar Nova Avaliação
+        </button>
+      </div>
+
+      <!-- Search & Category Filter Pills -->
+      <div class="space-y-3">
+        <div class="relative">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2" style="color: var(--text-muted);"></i>
+          <input type="text" id="eval-search-input" oninput="renderEvaluationsCatalog()" placeholder="Buscar avaliação (ex: 1RM, RAST, RSI, Cooper, Y Balance, Quadril...)" class="thg-input w-full rounded-2xl pl-10 pr-4 py-3 text-sm" />
+        </div>
+
+        <div id="category-filter-pills" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1"></div>
+      </div>
+
+      <!-- Categorized Protocols Container -->
+      <div id="evaluations-catalog-container" class="space-y-8"></div>
+    </section>
+
+    <!-- ==================== TAB 3: BIBLIOTECA DE VÍDEOS (MP4) ==================== -->
+    <section id="tab-videos" class="tab-section hidden animate-enter space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-wide">BIBLIOTECA DE VÍDEOS (MP4)</h2>
+          <p class="text-xs sm:text-sm" style="color: var(--text-secondary);">
+            Adicione seus vídeos em <strong style="color: var(--accent-gold);">.MP4</strong> diretamente do dispositivo (armazenamento local persistente) ou por link para análise biomecânica.
+          </p>
+        </div>
+
+        <button onclick="openAddVideoModal()" class="gold-btn px-4 py-3 rounded-2xl text-sm flex items-center justify-center gap-2 flex-shrink-0">
+          <i data-lucide="upload-cloud" class="w-4 h-4"></i> Adicionar Vídeo MP4
+        </button>
+      </div>
+
+      <!-- Drag & Drop MP4 Quick Zone -->
+      <div id="mp4-dropzone" onclick="document.getElementById('quick-mp4-input').click()" class="thg-card border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition-all hover:opacity-95" style="border-color: var(--border-strong);">
+        <input type="file" id="quick-mp4-input" accept="video/mp4,video/webm,video/quicktime,video/*" multiple class="hidden" onchange="handleQuickFileDrop(event)" />
+        <div class="w-12 h-12 rounded-2xl mx-auto mb-2.5 flex items-center justify-center" style="background: var(--accent-gold-bg); color: var(--accent-gold);">
+          <i data-lucide="film" class="w-6 h-6"></i>
+        </div>
+        <p class="font-bold text-sm sm:text-base">Toque para selecionar ou arraste arquivos <span style="color: var(--accent-gold);">.MP4</span> aqui</p>
+        <p class="text-xs mt-1" style="color: var(--text-muted);">Suporte completo a MP4 • Player com câmera lenta (0.25x, 0.5x, 0.75x) para análise técnica</p>
+      </div>
+
+      <!-- Video Filters -->
+      <div class="flex flex-col sm:flex-row gap-3">
+        <div class="relative flex-1">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2" style="color: var(--text-muted);"></i>
+          <input type="text" id="video-search-input" oninput="renderVideoLibrary()" placeholder="Buscar vídeo por título, exercício ou observação..." class="thg-input w-full rounded-xl pl-10 pr-4 py-2.5 text-sm" />
+        </div>
+        <select id="video-category-filter" onchange="renderVideoLibrary()" class="thg-input rounded-xl px-3.5 py-2.5 text-sm font-semibold">
+          <option value="ALL">Todas as Categorias</option>
+          <option value="Força & Potência">Força & Potência</option>
+          <option value="Saltos & Pliometria">Saltos & Pliometria</option>
+          <option value="Velocidade & Sprints">Velocidade & Sprints</option>
+          <option value="Agilidade & Mobilidade">Agilidade & Mobilidade</option>
+          <option value="Execução de Testes">Execução de Testes</option>
+          <option value="Análise de Jogo / Treino">Análise de Jogo / Treino</option>
+        </select>
+      </div>
+
+      <!-- Videos Grid -->
+      <div id="videos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+
+    <!-- ==================== TAB 4: ATLETAS & RELATÓRIOS ==================== -->
+    <section id="tab-atletas" class="tab-section hidden animate-enter space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-wide">ATLETAS & RELATÓRIOS</h2>
+          <p class="text-xs sm:text-sm" style="color: var(--text-secondary);">
+            Gerencie o elenco, consulte o histórico completo de avaliações e exporte relatórios de desempenho.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="exportJsonReport()" class="px-3.5 py-2.5 rounded-xl text-xs font-bold border flex items-center gap-1.5" style="background: var(--bg-input); border-color: var(--border-subtle);">
+            <i data-lucide="download" class="w-4 h-4" style="color: var(--accent-gold);"></i> Exportar Backup JSON
+          </button>
+          <button onclick="openNewAthleteModal()" class="gold-btn px-4 py-2.5 rounded-xl text-xs flex items-center gap-1.5">
+            <i data-lucide="user-plus" class="w-4 h-4"></i> Cadastrar Atleta
+          </button>
+        </div>
+      </div>
+
+      <!-- Athletes Roster Cards -->
+      <div id="athletes-roster-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+      <!-- Full Evaluation History Table/Cards for Selected Athlete -->
+      <div class="thg-card rounded-2xl p-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b" style="border-color: var(--border-subtle);">
+          <div>
+            <h3 class="font-display text-xl font-bold tracking-wide">HISTÓRICO DE AVALIAÇÕES DO ATLETA</h3>
+            <p id="history-athlete-subtitle" class="text-xs" style="color: var(--text-secondary);"></p>
+          </div>
+          <button onclick="window.print()" class="px-3.5 py-2 rounded-xl text-xs font-bold border flex items-center gap-1.5 self-start" style="background: var(--accent-gold-bg); border-color: var(--border-strong); color: var(--accent-gold);">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i> Imprimir / Salvar PDF
+          </button>
+        </div>
+
+        <div id="athlete-history-list" class="space-y-3"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Mobile Navigation Bar -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-30 border-t backdrop-blur-xl px-2 py-1.5 flex items-center justify-around" style="background: var(--nav-bg); border-color: var(--border-subtle);">
+    <button onclick="switchTab('dashboard')" data-nav="dashboard" class="nav-btn-mobile flex flex-col items-center justify-center py-1.5 px-3 rounded-xl text-[11px] font-semibold">
+      <i data-lucide="layout-dashboard" class="w-5 h-5 mb-0.5"></i>
+      <span>Início</span>
+    </button>
+    <button onclick="switchTab('avaliacoes')" data-nav="avaliacoes" class="nav-btn-mobile flex flex-col items-center justify-center py-1.5 px-3 rounded-xl text-[11px] font-semibold">
+      <i data-lucide="activity" class="w-5 h-5 mb-0.5"></i>
+      <span>Avaliações</span>
+    </button>
+    <button onclick="switchTab('videos')" data-nav="videos" class="nav-btn-mobile flex flex-col items-center justify-center py-1.5 px-3 rounded-xl text-[11px] font-semibold">
+      <i data-lucide="film" class="w-5 h-5 mb-0.5"></i>
+      <span>Vídeos MP4</span>
+    </button>
+    <button onclick="switchTab('atletas')" data-nav="atletas" class="nav-btn-mobile flex flex-col items-center justify-center py-1.5 px-3 rounded-xl text-[11px] font-semibold">
+      <i data-lucide="users" class="w-5 h-5 mb-0.5"></i>
+      <span>Atletas</span>
+    </button>
+  </nav>
+
+  <!-- ==================== MODAL 1: EXECUTE EVALUATION ==================== -->
+  <div id="eval-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-sm">
+    <div class="thg-card thg-card-highlight w-full max-w-2xl rounded-3xl max-h-[92vh] flex flex-col overflow-hidden animate-enter">
+      <!-- Modal Header -->
+      <div class="p-5 border-b flex items-start justify-between gap-3" style="border-color: var(--border-subtle);">
+        <div>
+          <span id="eval-modal-category" class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full" style="background: var(--accent-gold-bg); color: var(--accent-gold);">Categoria</span>
+          <h3 id="eval-modal-title" class="font-display text-2xl font-bold mt-1.5">Nome do Teste</h3>
+          <p id="eval-modal-desc" class="text-xs mt-0.5" style="color: var(--text-secondary);"></p>
+        </div>
+        <button onclick="closeEvalModal()" class="p-2 rounded-xl border" style="background: var(--bg-input); border-color: var(--border-subtle);">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-5 overflow-y-auto space-y-4 flex-1">
+        <!-- Athlete & Date Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Atleta Avaliado</label>
+            <select id="eval-modal-athlete" class="thg-input w-full rounded-xl px-3 py-2.5 text-sm font-semibold"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Data da Avaliação</label>
+            <input type="date" id="eval-modal-date" class="thg-input w-full rounded-xl px-3 py-2.5 text-sm font-semibold" />
+          </div>
+        </div>
+
+        <!-- Dynamic Fields Container -->
+        <div id="eval-modal-fields" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+
+        <!-- Live Calculated Results Box -->
+        <div class="rounded-2xl p-4 border" style="background: var(--accent-gold-bg); border-color: var(--border-strong);">
+          <div class="flex items-center gap-2 mb-2">
+            <i data-lucide="cpu" class="w-4 h-4" style="color: var(--accent-gold);"></i>
+            <span class="text-xs font-bold uppercase tracking-wider" style="color: var(--accent-gold);">Resultados & Índices Calculados em Tempo Real</span>
+          </div>
+          <div id="eval-modal-live-results" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm"></div>
+        </div>
+
+        <!-- Coach Notes -->
+        <div>
+          <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Observações Técnicas / Condições do Teste</label>
+          <textarea id="eval-modal-notes" rows="2" placeholder="Ex: Solo seco, chuteira trava baixa, sem fadiga prévia..." class="thg-input w-full rounded-xl px-3 py-2 text-sm"></textarea>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 border-t flex items-center justify-end gap-2.5" style="border-color: var(--border-subtle);">
+        <button onclick="closeEvalModal()" class="px-4 py-2.5 rounded-xl text-sm font-semibold border" style="background: var(--bg-input); border-color: var(--border-subtle);">Cancelar</button>
+        <button onclick="saveEvaluationResult()" class="gold-btn px-5 py-2.5 rounded-xl text-sm flex items-center gap-2">
+          <i data-lucide="check-circle-2" class="w-4 h-4"></i> Salvar Avaliação
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 2: CUSTOM EVALUATION BUILDER ==================== -->
+  <div id="custom-eval-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-sm">
+    <div class="thg-card thg-card-highlight w-full max-w-xl rounded-3xl max-h-[92vh] flex flex-col overflow-hidden animate-enter">
+      <div class="p-5 border-b flex items-center justify-between" style="border-color: var(--border-subtle);">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider" style="color: var(--accent-gold);">Construtor de Protocolos</span>
+          <h3 class="font-display text-2xl font-bold">NOVA AVALIAÇÃO PERSONALIZADA</h3>
+        </div>
+        <button onclick="closeCustomEvalBuilder()" class="p-2 rounded-xl border" style="background: var(--bg-input); border-color: var(--border-subtle);">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-5 overflow-y-auto space-y-4 flex-1">
+        <div>
+          <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Nome da Avaliação *</label>
+          <input type="text" id="custom-eval-name" placeholder="Ex: Yo-Yo Intermittent Recovery Level 1, Prancha Isométrica, Agilidade Illinois..." class="thg-input w-full rounded-xl px-3.5 py-2.5 text-sm font-semibold" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Categoria Existente ou Nova *</label>
+            <input type="text" id="custom-eval-category" list="existing-categories-list" placeholder="Escolha ou digite nova categoria" class="thg-input w-full rounded-xl px-3.5 py-2.5 text-sm" />
+            <datalist id="existing-categories-list"></datalist>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Cálculo Automático Opcional</label>
+            <select id="custom-eval-calc-mode" class="thg-input w-full rounded-xl px-3 py-2.5 text-sm">
+              <option value="none">Apenas registrar métricas</option>
+              <option value="asymmetry">Assimetria Bilateral (Campo 1 vs Campo 2)</option>
+              <option value="average">Média dos campos numéricos</option>
+              <option value="sum">Soma total dos campos numéricos</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Descrição / Protocolo</label>
+          <input type="text" id="custom-eval-desc" placeholder="Breve descrição de como executar o teste..." class="thg-input w-full rounded-xl px-3.5 py-2 text-sm" />
+        </div>
+
+        <!-- Custom Fields Builder -->
+        <div class="space-y-2.5">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-bold uppercase tracking-wider" style="color: var(--accent-gold);">Campos de Medição do Teste</label>
+            <button type="button" onclick="addCustomBuilderFieldRow()" class="text-xs font-bold px-2.5 py-1 rounded-lg border flex items-center gap-1" style="background: var(--accent-gold-bg); border-color: var(--border-strong); color: var(--accent-gold);">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i> Adicionar Campo
+            </button>
+          </div>
+          <div id="custom-builder-fields-list" class="space-y-2"></div>
+        </div>
+      </div>
+
+      <div class="p-4 border-t flex items-center justify-end gap-2.5" style="border-color: var(--border-subtle);">
+        <button onclick="closeCustomEvalBuilder()" class="px-4 py-2.5 rounded-xl text-sm font-semibold border" style="background: var(--bg-input); border-color: var(--border-subtle);">Cancelar</button>
+        <button onclick="saveCustomEvaluationProtocol()" class="gold-btn px-5 py-2.5 rounded-xl text-sm flex items-center gap-2">
+          <i data-lucide="save" class="w-4 h-4"></i> Criar Avaliação
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 3: ADD MP4 VIDEO ==================== -->
+  <div id="add-video-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-sm">
+    <div class="thg-card thg-card-highlight w-full max-w-lg rounded-3xl overflow-hidden animate-enter">
+      <div class="p-5 border-b flex items-center justify-between" style="border-color: var(--border-subtle);">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider" style="color: var(--accent-gold);">Acervo Técnico MP4</span>
+          <h3 class="font-display text-2xl font-bold">ADICIONAR VÍDEO À BIBLIOTECA</h3>
+        </div>
+        <button onclick="closeAddVideoModal()" class="p-2 rounded-xl border" style="background: var(--bg-input); border-color: var(--border-subtle);">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-5 space-y-4">
+        <div>
+          <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Título do Vídeo *</label>
+          <input type="text" id="video-title-input" placeholder="Ex: Execução CMJ Unilateral - Atleta Lucas" class="thg-input w-full rounded-xl px-3.5 py-2.5 text-sm font-semibold" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Categoria</label>
+          <select id="video-category-input" class="thg-input w-full rounded-xl px-3.5 py-2.5 text-sm">
+            <option value="Força & Potência">Força & Potência</option>
+            <option value="Saltos & Pliometria">Saltos & Pliometria</option>
+            <option value="Velocidade & Sprints">Velocidade & Sprints</option>
+            <option value="Agilidade & Mobilidade">Agilidade & Mobilidade</option>
+            <option value="Execução de Testes">Execução de Testes</option>
+            <option value="Análise de Jogo / Treino">Análise de Jogo / Treino</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Arquivo de Vídeo (.MP4) *</label>
+          <input type="file" id="video-file-input" accept="video/mp4,video/webm,video/quicktime,video/*" class="thg-input w-full rounded-xl p-2 text-xs file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-amber-400 file:text-black cursor-pointer" />
+          <p class="text-[11px] mt-1" style="color: var(--text-muted);">O arquivo MP4 fica salvo localmente no banco IndexedDB do seu dispositivo.</p>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Observações Técnicas / Pontos-Chave</label>
+          <textarea id="video-notes-input" rows="2" placeholder="Ex: Observar valgo dinâmico na aterrissagem e tempo de contato..." class="thg-input w-full rounded-xl px-3.5 py-2 text-sm"></textarea>
+        </div>
+      </div>
+
+      <div class="p-4 border-t flex items-center justify-end gap-2.5" style="border-color: var(--border-subtle);">
+        <button onclick="closeAddVideoModal()" class="px-4 py-2.5 rounded-xl text-sm font-semibold border" style="background: var(--bg-input); border-color: var(--border-subtle);">Cancelar</button>
+        <button onclick="saveUploadedVideo()" id="save-video-btn" class="gold-btn px-5 py-2.5 rounded-xl text-sm flex items-center gap-2">
+          <i data-lucide="check" class="w-4 h-4"></i> Salvar Vídeo MP4
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 4: MP4 BIOMECHANICAL VIDEO PLAYER ==================== -->
+  <div id="video-player-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-black/90 backdrop-blur-md">
+    <div class="thg-card thg-card-highlight w-full max-w-3xl rounded-3xl overflow-hidden animate-enter">
+      <div class="p-4 border-b flex items-center justify-between" style="border-color: var(--border-subtle);">
+        <div>
+          <span id="player-video-category" class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full" style="background: var(--accent-gold-bg); color: var(--accent-gold);">Categoria</span>
+          <h3 id="player-video-title" class="font-display text-xl font-bold mt-1">Título do Vídeo</h3>
+        </div>
+        <button onclick="closeVideoPlayer()" class="p-2 rounded-xl border" style="background: var(--bg-input); border-color: var(--border-subtle);">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="bg-black flex items-center justify-center max-h-[60vh]">
+        <video id="thg-video-element" controls playsinline class="w-full max-h-[60vh] object-contain"></video>
+      </div>
+
+      <!-- Biomechanical Slow-Motion Controls -->
+      <div class="p-4 space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-1.5">
+            <span class="text-xs font-bold uppercase tracking-wider mr-1" style="color: var(--text-secondary);">Velocidade:</span>
+            <button onclick="setVideoSpeed(0.25)" data-speed="0.25" class="speed-btn px-2.5 py-1 rounded-lg text-xs font-bold border" style="border-color: var(--border-subtle);">0.25x</button>
+            <button onclick="setVideoSpeed(0.5)" data-speed="0.5" class="speed-btn px-2.5 py-1 rounded-lg text-xs font-bold border" style="border-color: var(--border-subtle);">0.5x</button>
+            <button onclick="setVideoSpeed(0.75)" data-speed="0.75" class="speed-btn px-2.5 py-1 rounded-lg text-xs font-bold border" style="border-color: var(--border-subtle);">0.75x</button>
+            <button onclick="setVideoSpeed(1)" data-speed="1" class="speed-btn px-2.5 py-1 rounded-lg text-xs font-bold border" style="border-color: var(--border-subtle);">1.0x</button>
+          </div>
+
+          <button onclick="toggleVideoLoop()" id="video-loop-btn" class="px-3 py-1 rounded-lg text-xs font-bold border flex items-center gap-1.5" style="background: var(--bg-input); border-color: var(--border-subtle);">
+            <i data-lucide="repeat" class="w-3.5 h-3.5" style="color: var(--accent-gold);"></i> Loop: <span id="video-loop-status">OFF</span>
+          </button>
+        </div>
+
+        <p id="player-video-notes" class="text-xs p-3 rounded-xl" style="background: var(--bg-input); color: var(--text-secondary);"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 5: NEW ATHLETE ==================== -->
+  <div id="new-athlete-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-sm">
+    <div class="thg-card thg-card-highlight w-full max-w-md rounded-3xl overflow-hidden animate-enter">
+      <div class="p-5 border-b flex items-center justify-between" style="border-color: var(--border-subtle);">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider" style="color: var(--accent-gold);">Cadastro de Elenco</span>
+          <h3 class="font-display text-2xl font-bold">NOVO ATLETA</h3>
+        </div>
+        <button onclick="closeNewAthleteModal()" class="p-2 rounded-xl border" style="background: var(--bg-input); border-color: var(--border-subtle);">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-5 space-y-3.5">
+        <div>
+          <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Nome Completo *</label>
+          <input type="text" id="athlete-name-input" placeholder="Ex: Gabriel Martins" class="thg-input w-full rounded-xl px-3.5 py-2.5 text-sm font-semibold" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Posição</label>
+            <select id="athlete-position-input" class="thg-input w-full rounded-xl px-3 py-2.5 text-sm">
+              <option value="Atacante">Atacante</option>
+              <option value="Meia">Meia</option>
+              <option value="Volante">Volante</option>
+              <option value="Lateral">Lateral</option>
+              <option value="Zagueiro">Zagueiro</option>
+              <option value="Goleiro">Goleiro</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Idade (anos)</label>
+            <input type="number" id="athlete-age-input" value="22" min="10" max="50" class="thg-input w-full rounded-xl px-3 py-2.5 text-sm" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Massa Corporal (kg)</label>
+            <input type="number" step="0.1" id="athlete-weight-input" value="75.0" class="thg-input w-full rounded-xl px-3 py-2.5 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">Estatura (cm)</label>
+            <input type="number" id="athlete-height-input" value="178" class="thg-input w-full rounded-xl px-3 py-2.5 text-sm" />
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 border-t flex items-center justify-end gap-2.5" style="border-color: var(--border-subtle);">
+        <button onclick="closeNewAthleteModal()" class="px-4 py-2.5 rounded-xl text-sm font-semibold border" style="background: var(--bg-input); border-color: var(--border-subtle);">Cancelar</button>
+        <button onclick="saveNewAthlete()" class="gold-btn px-5 py-2.5 rounded-xl text-sm flex items-center gap-2">
+          <i data-lucide="user-check" class="w-4 h-4"></i> Salvar Atleta
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 6: PWA INSTALL GUIDE ==================== -->
+  <div id="pwa-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-sm">
+    <div class="thg-card thg-card-highlight w-full max-w-md rounded-3xl overflow-hidden animate-enter">
+      <div class="p-5 border-b flex items-center justify-between" style="border-color: var(--border-subtle);">
+        <div class="flex items-center gap-2">
+          <i data-lucide="smartphone" class="w-5 h-5" style="color: var(--accent-gold);"></i>
+          <h3 class="font-display text-xl font-bold">INSTALAR THG PERFORMANCE</h3>
+        </div>
+        <button onclick="closePwaModal()" class="p-2 rounded-xl border" style="background: var(--bg-input); border-color: var(--border-subtle);">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-5 space-y-3 text-xs sm:text-sm" style="color: var(--text-secondary);">
+        <p>Este aplicativo foi recriado como um <strong>PWA (Progressive Web App)</strong> nativo com o novo ícone <strong>THG PERFORMANCE</strong> e tema Preto & Dourado, funcionando offline sem precisar do antigo wrapper JOGABR.</p>
+        <div class="p-3.5 rounded-2xl border space-y-2" style="background: var(--bg-input); border-color: var(--border-subtle);">
+          <p class="font-bold" style="color: var(--text-primary);">No Android (Chrome):</p>
+          <p>Toque no menu <strong>⋮</strong> (canto superior direito) → <strong>"Adicionar à tela inicial"</strong> ou <strong>"Instalar aplicativo"</strong>.</p>
+          <p class="font-bold pt-1" style="color: var(--text-primary);">No iPhone / iPad (Safari):</p>
+          <p>Toque no botão <strong>Compartilhar</strong> → <strong>"Adicionar à Tela de Início"</strong>.</p>
+        </div>
+      </div>
+      <div class="p-4 border-t flex justify-end" style="border-color: var(--border-subtle);">
+        <button onclick="closePwaModal()" class="gold-btn px-5 py-2 rounded-xl text-sm">Entendi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== APPLICATION LOGIC ==================== -->
+  <script>
+    // ---------------------------------------------------------
+    // 1. BUILT-IN PHYSICAL EVALUATION PROTOCOLS BY CATEGORY
+    // ---------------------------------------------------------
+    const BUILTIN_PROTOCOLS = [
+      // CATEGORY 1: FORÇA & PERFIL CARGA-VELOCIDADE/POTÊNCIA
+      {
+        id: "teste_1rm",
+        name: "TESTE DE 1RM",
+        category: "Força & Perfil Carga-Velocidade/Potência",
+        icon: "dumbbell",
+        description: "Estimativa de 1 Repetição Máxima (fórmulas de Brzycki & Epley) e força relativa ao peso corporal.",
+        fields: [
+          { key: "exercise", label: "Exercício (ex: Agachamento, Supino)", type: "text", default: "Agachamento Livre" },
+          { key: "load", label: "Carga Levantada (kg)", type: "number", step: "0.5", default: 120 },
+          { key: "reps", label: "Repetições Executadas (1-12)", type: "number", step: "1", default: 4 }
+        ],
+        calculate: (v, athlete) => {
+          const load = parseFloat(v.load) || 0;
+          const reps = Math.max(1, parseInt(v.reps) || 1);
+          const bw = athlete?.weight || 75;
+          const epley = reps === 1 ? load : load * (1 + reps / 30);
+          const brzycki = reps === 1 ? load : load * (36 / (37 - Math.min(reps, 36)));
+          const avg1RM = (epley + brzycki) / 2;
+          const rel = bw > 0 ? avg1RM / bw : 0;
+          return [
+            { label: "1RM Estimado (Média)", value: `${avg1RM.toFixed(1)} kg`, highlight: true },
+            { label: "Força Relativa (1RM/PC)", value: `${rel.toFixed(2)} x PC`, highlight: true },
+            { label: "Fórmula Epley", value: `${epley.toFixed(1)} kg` },
+            { label: "Fórmula Brzycki", value: `${brzycki.toFixed(1)} kg` }
+          ];
+        }
+      },
+      {
+        id: "dinamometria_isometrica",
+        name: "DINAMÔMETRIA ISOMÉTRICA",
+        category: "Força & Perfil Carga-Velocidade/Potência",
+        icon: "gauge",
+        description: "Avaliação de pico de força isométrica bilateral (N ou kgf) e cálculo automático do déficit/assimetria entre membros.",
+        fields: [
+          { key: "muscle", label: "Grupamento / Teste", type: "text", default: "Extensores de Joelho (90°)" },
+          { key: "unit", label: "Unidade (N ou kgf)", type: "text", default: "N" },
+          { key: "rightPeak", label: "Pico de Força Direito", type: "number", step: "0.1", default: 685 },
+          { key: "leftPeak", label: "Pico de Força Esquerdo", type: "number", step: "0.1", default: 642 }
+        ],
+        calculate: (v) => {
+          const r = parseFloat(v.rightPeak) || 0;
+          const l = parseFloat(v.leftPeak) || 0;
+          const u = v.unit || "N";
+          const max = Math.max(r, l);
+          const asym = max > 0 ? ((Math.abs(r - l) / max) * 100) : 0;
+          const dom = r >= l ? "Direito" : "Esquerdo";
+          const status = asym <= 10 ? "Equilibrado (≤10%)" : asym <= 15 ? "Atenção (10-15%)" : "Risco Elevado (>15%)";
+          return [
+            { label: "Assimetria Bilateral", value: `${asym.toFixed(1)}% (${dom})`, highlight: true },
+            { label: "Classificação Clínica", value: status, highlight: true },
+            { label: "Diferença Absoluta", value: `${Math.abs(r - l).toFixed(1)} ${u}` },
+            { label: "Soma Bilateral", value: `${(r + l).toFixed(1)} ${u}` }
+          ];
+        }
+      },
+      {
+        id: "perfil_carga_velocidade",
+        name: "PERFIL CARGA VELOCIDADE",
+        category: "Força & Perfil Carga-Velocidade/Potência",
+        icon: "trending-up",
+        description: "Regressão linear de 2 pontos carga-velocidade para estimar L0 (força máxima teórica) e V0 (velocidade máxima sem carga).",
+        fields: [
+          { key: "exercise", label: "Exercício", type: "text", default: "Jump Squat / Agachamento" },
+          { key: "load1", label: "Carga Leve 1 (kg)", type: "number", step: "0.5", default: 30 },
+          { key: "vel1", label: "Velocidade Média Propulsiva 1 (m/s)", type: "number", step: "0.01", default: 1.18 },
+          { key: "load2", label: "Carga Pesada 2 (kg)", type: "number", step: "0.5", default: 80 },
+          { key: "vel2", label: "Velocidade Média Propulsiva 2 (m/s)", type: "number", step: "0.01", default: 0.62 }
+        ],
+        calculate: (v) => {
+          const l1 = parseFloat(v.load1) || 0;
+          const v1 = parseFloat(v.vel1) || 0;
+          const l2 = parseFloat(v.load2) || 0;
+          const v2 = parseFloat(v.vel2) || 0;
+          if (l2 === l1 || v1 === v2) {
+            return [{ label: "Aviso", value: "Insira duas cargas e velocidades distintas", highlight: true }];
+          }
+          const slope = (v2 - v1) / (l2 - l1);
+          const v0 = v1 - slope * l1;
+          const l0 = -v0 / slope;
+          return [
+            { label: "V0 (Velocidade Máx. Teórica)", value: `${v0.toFixed(2)} m/s`, highlight: true },
+            { label: "L0 (Carga Máx. Teórica)", value: `${l0.toFixed(1)} kg`, highlight: true },
+            { label: "Inclinação (Slope)", value: `${slope.toFixed(4)} m/s/kg` },
+            { label: "Perfil Dominante", value: v0 > 1.5 ? "Orientado à Velocidade" : "Orientado à Força" }
+          ];
+        }
+      },
+      {
+        id: "perfil_carga_potencia",
+        name: "PERFIL CARGA POTÊNCIA",
+        category: "Força & Perfil Carga-Velocidade/Potência",
+        icon: "zap",
+        description: "Cálculo de potência mecânica (Watts) e potência relativa (W/kg) para identificar a zona de potência ótima.",
+        fields: [
+          { key: "exercise", label: "Exercício", type: "text", default: "Half Squat Balístico" },
+          { key: "load", label: "Carga Externa (kg)", type: "number", step: "0.5", default: 50 },
+          { key: "velocity", label: "Velocidade Média (m/s)", type: "number", step: "0.01", default: 0.96 }
+        ],
+        calculate: (v, athlete) => {
+          const load = parseFloat(v.load) || 0;
+          const vel = parseFloat(v.velocity) || 0;
+          const bw = athlete?.weight || 75;
+          const forceN = load * 9.81;
+          const powerW = forceN * vel;
+          const relPower = bw > 0 ? powerW / bw : 0;
+          return [
+            { label: "Potência Mecânica", value: `${powerW.toFixed(0)} W`, highlight: true },
+            { label: "Potência Relativa", value: `${relPower.toFixed(2)} W/kg`, highlight: true },
+            { label: "Força Aplicada", value: `${forceN.toFixed(0)} N` },
+            { label: "Zona de Treino", value: vel >= 0.85 && vel <= 1.15 ? "Zona Ótima de Potência" : vel > 1.15 ? "Força-Velocidade" : "Força Máxima" }
+          ];
+        }
+      },
+      {
+        id: "indice_forca_dinamica",
+        name: "ÍNDICE DE FORÇA DINÂMICA",
+        category: "Força & Perfil Carga-Velocidade/Potência",
+        icon: "sliders",
+        description: "Dynamic Strength Index (DSI = Pico de Força Balística / Pico de Força Isométrica Máxima) para prescrição individualizada.",
+        fields: [
+          { key: "ballisticForce", label: "Pico de Força Balística - CMJ/SJ (N)", type: "number", step: "1", default: 1950 },
+          { key: "isoForce", label: "Pico de Força Isométrica - IMTP (N)", type: "number", step: "1", default: 2780 }
+        ],
+        calculate: (v) => {
+          const bf = parseFloat(v.ballisticForce) || 0;
+          const isof = parseFloat(v.isoForce) || 0;
+          const dsi = isof > 0 ? bf / isof : 0;
+          let rec = "Equilibrado (Treino Misto Força + Potência)";
+          if (dsi > 0 && dsi < 0.60) rec = "Déficit Balístico (<0.60) → Priorizar Pliometria/Velocidade";
+          else if (dsi > 0.80) rec = "Déficit Força Máx. (>0.80) → Priorizar Força Máxima";
+          return [
+            { label: "Índice de Força Dinâmica (DSI)", value: dsi.toFixed(2), highlight: true },
+            { label: "Direcionamento", value: rec, highlight: true }
+          ];
+        }
+      },
+
+      // CATEGORY 2: POTÊNCIA & PLIOMETRIA (SALTOS)
+      {
+        id: "cmj_unilateral",
+        name: "CMJ UNILATERAL",
+        category: "Potência & Pliometria (Saltos)",
+        icon: "arrow-up-circle",
+        description: "Salto com Contramovimento Unilateral (Direito vs Esquerdo) para potência de membros inferiores e assimetria.",
+        fields: [
+          { key: "rightHeight", label: "Altura Perna Direita (cm)", type: "number", step: "0.1", default: 23.5 },
+          { key: "leftHeight", label: "Altura Perna Esquerda (cm)", type: "number", step: "0.1", default: 21.8 }
+        ],
+        calculate: (v, athlete) => {
+          const r = parseFloat(v.rightHeight) || 0;
+          const l = parseFloat(v.leftHeight) || 0;
+          const bw = athlete?.weight || 75;
+          const max = Math.max(r, l);
+          const asym = max > 0 ? ((Math.abs(r - l) / max) * 100) : 0;
+          // Sayers formula adapted
+          const powerR = (60.7 * r) + (45.3 * bw) - 2055;
+          const powerL = (60.7 * l) + (45.3 * bw) - 2055;
+          return [
+            { label: "Assimetria Unilateral", value: `${asym.toFixed(1)}%`, highlight: true },
+            { label: "Membro Dominante", value: r >= l ? `Direita (+${(r - l).toFixed(1)} cm)` : `Esquerda (+${(l - r).toFixed(1)} cm)`, highlight: true },
+            { label: "Potência Est. Direita", value: `${Math.max(0, powerR).toFixed(0)} W` },
+            { label: "Potência Est. Esquerda", value: `${Math.max(0, powerL).toFixed(0)} W` }
+          ];
+        }
+      },
+      {
+        id: "rsi_bilateral",
+        name: "RSI",
+        category: "Potência & Pliometria (Saltos)",
+        icon: "activity",
+        description: "Reactive Strength Index (Índice de Força Reativa) = Altura do Salto (m) / Tempo de Contato no Solo (s).",
+        fields: [
+          { key: "jumpHeightCm", label: "Altura do Salto (cm)", type: "number", step: "0.1", default: 36.5 },
+          { key: "contactTimeMs", label: "Tempo de Contato no Solo (ms)", type: "number", step: "1", default: 185 }
+        ],
+        calculate: (v) => {
+          const hM = (parseFloat(v.jumpHeightCm) || 0) / 100;
+          const ctS = (parseFloat(v.contactTimeMs) || 0) / 1000;
+          const rsi = ctS > 0 ? hM / ctS : 0;
+          let level = "Excelente (>2.0)";
+          if (rsi < 1.0) level = "Baixo (<1.0) - Foco em rigidez elástica";
+          else if (rsi < 1.5) level = "Moderado (1.0 - 1.5)";
+          else if (rsi < 2.0) level = "Bom (1.5 - 2.0)";
+          return [
+            { label: "RSI (m/s)", value: rsi.toFixed(2), highlight: true },
+            { label: "Classificação Reativa", value: level, highlight: true }
+          ];
+        }
+      },
+      {
+        id: "rsi_unilateral",
+        name: "RSI UNILATERAL",
+        category: "Potência & Pliometria (Saltos)",
+        icon: "git-compare",
+        description: "Avaliação da capacidade reativa unilateral e assimetria de rigidez tendínea entre perna direita e esquerda.",
+        fields: [
+          { key: "rHeight", label: "Altura Direita (cm)", type: "number", step: "0.1", default: 19.5 },
+          { key: "rContact", label: "Tempo Contato Direita (ms)", type: "number", step: "1", default: 210 },
+          { key: "lHeight", label: "Altura Esquerda (cm)", type: "number", step: "0.1", default: 18.2 },
+          { key: "lContact", label: "Tempo Contato Esquerda (ms)", type: "number", step: "1", default: 225 }
+        ],
+        calculate: (v) => {
+          const rsiR = (parseFloat(v.rContact) > 0) ? ((parseFloat(v.rHeight) / 100) / (parseFloat(v.rContact) / 1000)) : 0;
+          const rsiL = (parseFloat(v.lContact) > 0) ? ((parseFloat(v.lHeight) / 100) / (parseFloat(v.lContact) / 1000)) : 0;
+          const max = Math.max(rsiR, rsiL);
+          const asym = max > 0 ? ((Math.abs(rsiR - rsiL) / max) * 100) : 0;
+          return [
+            { label: "RSI Direito", value: `${rsiR.toFixed(2)} m/s`, highlight: true },
+            { label: "RSI Esquerdo", value: `${rsiL.toFixed(2)} m/s`, highlight: true },
+            { label: "Assimetria de RSI", value: `${asym.toFixed(1)}%` },
+            { label: "Status", value: asym <= 10 ? "Simétrico (≤10%)" : "Assimetria Relevante (>10%)" }
+          ];
+        }
+      },
+      {
+        id: "drop_jump_incremental",
+        name: "DROP JUMP INCREMENTAL",
+        category: "Potência & Pliometria (Saltos)",
+        icon: "layers",
+        description: "Perfil de Drop Jump em múltiplas alturas (20, 30, 40, 50 cm) para identificar a altura ótima de queda pliométrica.",
+        fields: [
+          { key: "h20", label: "20cm - Altura Salto (cm)", type: "number", step: "0.1", default: 34.0 },
+          { key: "c20", label: "20cm - Contato (ms)", type: "number", step: "1", default: 175 },
+          { key: "h30", label: "30cm - Altura Salto (cm)", type: "number", step: "0.1", default: 37.5 },
+          { key: "c30", label: "30cm - Contato (ms)", type: "number", step: "1", default: 182 },
+          { key: "h40", label: "40cm - Altura Salto (cm)", type: "number", step: "0.1", default: 38.2 },
+          { key: "c40", label: "40cm - Contato (ms)", type: "number", step: "1", default: 205 },
+          { key: "h50", label: "50cm - Altura Salto (cm)", type: "number", step: "0.1", default: 35.0 },
+          { key: "c50", label: "50cm - Contato (ms)", type: "number", step: "1", default: 230 }
+        ],
+        calculate: (v) => {
+          const drops = [
+            { drop: "20 cm", rsi: v.c20 > 0 ? (v.h20 / 100) / (v.c20 / 1000) : 0 },
+            { drop: "30 cm", rsi: v.c30 > 0 ? (v.h30 / 100) / (v.c30 / 1000) : 0 },
+            { drop: "40 cm", rsi: v.c40 > 0 ? (v.h40 / 100) / (v.c40 / 1000) : 0 },
+            { drop: "50 cm", rsi: v.c50 > 0 ? (v.h50 / 100) / (v.c50 / 1000) : 0 }
+          ];
+          const best = drops.reduce((prev, curr) => (curr.rsi > prev.rsi ? curr : prev), drops[0]);
+          return [
+            { label: "Altura Ótima de Queda", value: best.drop, highlight: true },
+            { label: "Melhor RSI Alcançado", value: `${best.rsi.toFixed(2)} m/s`, highlight: true },
+            { label: "RSI 20cm / 30cm", value: `${drops[0].rsi.toFixed(2)} / ${drops[1].rsi.toFixed(2)}` },
+            { label: "RSI 40cm / 50cm", value: `${drops[2].rsi.toFixed(2)} / ${drops[3].rsi.toFixed(2)}` }
+          ];
+        }
+      },
+
+      // CATEGORY 3: VELOCIDADE & RESISTÊNCIA AERÓBIA/ANAERÓBIA
+      {
+        id: "cooper_12_min",
+        name: "COOPER 12 MINUTOS",
+        category: "Velocidade & Resistência Aeróbia/Anaeróbia",
+        icon: "heart-pulse",
+        description: "Teste aeróbio máximo de 12 minutos com cálculo automático de VO2máx estimado e velocidade aeróbia média.",
+        fields: [
+          { key: "distance", label: "Distância Total Percorrida (metros)", type: "number", step: "10", default: 3050 }
+        ],
+        calculate: (v) => {
+          const d = parseFloat(v.distance) || 0;
+          const vo2 = Math.max(0, (d - 504.9) / 44.73);
+          const speedKmh = (d / 1000) / (12 / 60);
+          let level = "Excelente Futebol (>58 ml/kg/min)";
+          if (vo2 < 48) level = "Abaixo do Ideal (<48)";
+          else if (vo2 < 54) level = "Bom (48 - 54)";
+          else if (vo2 < 58) level = "Muito Bom (54 - 58)";
+          return [
+            { label: "VO2máx Estimado", value: `${vo2.toFixed(1)} ml/kg/min`, highlight: true },
+            { label: "Nível Condicionamento", value: level, highlight: true },
+            { label: "Velocidade Média (VAM)", value: `${speedKmh.toFixed(2)} km/h` }
+          ];
+        }
+      },
+      {
+        id: "sprints_lineares",
+        name: "SPRINTS",
+        category: "Velocidade & Resistência Aeróbia/Anaeróbia",
+        icon: "flame",
+        description: "Avaliação de aceleração e velocidade máxima linear (10m, 20m, 30m ou 40m) em m/s e km/h.",
+        fields: [
+          { key: "dist", label: "Distância do Sprint (metros)", type: "number", step: "5", default: 30 },
+          { key: "time", label: "Tempo Registrado (segundos)", type: "number", step: "0.01", default: 3.98 }
+        ],
+        calculate: (v) => {
+          const d = parseFloat(v.dist) || 0;
+          const t = parseFloat(v.time) || 0;
+          const ms = t > 0 ? d / t : 0;
+          const kmh = ms * 3.6;
+          return [
+            { label: "Velocidade Média", value: `${kmh.toFixed(2)} km/h`, highlight: true },
+            { label: "Velocidade (m/s)", value: `${ms.toFixed(2)} m/s`, highlight: true }
+          ];
+        }
+      },
+      {
+        id: "rast_test",
+        name: "RAST TEST",
+        category: "Velocidade & Resistência Aeróbia/Anaeróbia",
+        icon: "battery-charging",
+        description: "Running-based Anaerobic Sprint Test: 6 sprints máximos de 35m com 10s de pausa. Calcula Potência Pico, Média, Mínima e Índice de Fadiga.",
+        fields: [
+          { key: "s1", label: "Sprint 1 - 35m (s)", type: "number", step: "0.01", default: 4.82 },
+          { key: "s2", label: "Sprint 2 - 35m (s)", type: "number", step: "0.01", default: 4.91 },
+          { key: "s3", label: "Sprint 3 - 35m (s)", type: "number", step: "0.01", default: 5.05 },
+          { key: "s4", label: "Sprint 4 - 35m (s)", type: "number", step: "0.01", default: 5.18 },
+          { key: "s5", label: "Sprint 5 - 35m (s)", type: "number", step: "0.01", default: 5.29 },
+          { key: "s6", label: "Sprint 6 - 35m (s)", type: "number", step: "0.01", default: 5.41 }
+        ],
+        calculate: (v, athlete) => {
+          const bw = athlete?.weight || 75;
+          const times = [v.s1, v.s2, v.s3, v.s4, v.s5, v.s6].map(x => parseFloat(x) || 0);
+          if (times.some(t => t <= 0)) {
+            return [{ label: "Aviso", value: "Preencha os 6 tempos de 35m", highlight: true }];
+          }
+          // Power = (BodyMass * Distance^2) / Time^3
+          const powers = times.map(t => (bw * 1225) / Math.pow(t, 3));
+          const maxP = Math.max(...powers);
+          const minP = Math.min(...powers);
+          const avgP = powers.reduce((a, b) => a + b, 0) / 6;
+          const totalTime = times.reduce((a, b) => a + b, 0);
+          const fatigueIndex = totalTime > 0 ? ((maxP - minP) / totalTime) : 0;
+          const fatiguePct = maxP > 0 ? (((maxP - minP) / maxP) * 100) : 0;
+          return [
+            { label: "Potência Pico", value: `${maxP.toFixed(0)} W (${(maxP/bw).toFixed(1)} W/kg)`, highlight: true },
+            { label: "Índice de Fadiga", value: `${fatigueIndex.toFixed(2)} W/s (${fatiguePct.toFixed(1)}%)`, highlight: true },
+            { label: "Potência Média", value: `${avgP.toFixed(0)} W` },
+            { label: "Potência Mínima", value: `${minP.toFixed(0)} W` }
+          ];
+        }
+      },
+
+      // CATEGORY 4: AGILIDADE, ESTABILIDADE & MOBILIDADE
+      {
+        id: "side_hop_test",
+        name: "SIDE HOP TEST",
+        category: "Agilidade, Estabilidade & Mobilidade",
+        icon: "move-horizontal",
+        description: "Saltos laterais unilaterais (40 cm de distância) durante 30 segundos para avaliar resistência neuromuscular e simetria (LSI).",
+        fields: [
+          { key: "rightHops", label: "Saltos Válidos Direita (30s)", type: "number", step: "1", default: 48 },
+          { key: "leftHops", label: "Saltos Válidos Esquerda (30s)", type: "number", step: "1", default: 45 }
+        ],
+        calculate: (v) => {
+          const r = parseInt(v.rightHops) || 0;
+          const l = parseInt(v.leftHops) || 0;
+          const max = Math.max(r, l);
+          const min = Math.min(r, l);
+          const lsi = max > 0 ? (min / max) * 100 : 0;
+          return [
+            { label: "Limb Symmetry Index (LSI)", value: `${lsi.toFixed(1)}%`, highlight: true },
+            { label: "Critério Return-to-Play", value: lsi >= 90 ? "Aprovado (≥90%)" : "Déficit (<90%)", highlight: true }
+          ];
+        }
+      },
+      {
+        id: "y_balance_test",
+        name: "Y BALANCE TEST",
+        category: "Agilidade, Estabilidade & Mobilidade",
+        icon: "compass",
+        description: "Controle neuromuscular dinâmico e estabilidade de tornozelo/joelho/quadril com cálculo de Score Composto % e assimetria anterior.",
+        fields: [
+          { key: "limbLen", label: "Comprimento Membro Inferior (cm)", type: "number", step: "0.5", default: 92 },
+          { key: "rAnt", label: "Direita - Anterior (cm)", type: "number", step: "0.5", default: 68 },
+          { key: "rPm", label: "Direita - Póstero-Medial (cm)", type: "number", step: "0.5", default: 104 },
+          { key: "rPl", label: "Direita - Póstero-Lateral (cm)", type: "number", step: "0.5", default: 101 },
+          { key: "lAnt", label: "Esquerda - Anterior (cm)", type: "number", step: "0.5", default: 66 },
+          { key: "lPm", label: "Esquerda - Póstero-Medial (cm)", type: "number", step: "0.5", default: 102 },
+          { key: "lPl", label: "Esquerda - Póstero-Lateral (cm)", type: "number", step: "0.5", default: 99 }
+        ],
+        calculate: (v) => {
+          const len = parseFloat(v.limbLen) || 0;
+          const sumR = (parseFloat(v.rAnt) || 0) + (parseFloat(v.rPm) || 0) + (parseFloat(v.rPl) || 0);
+          const sumL = (parseFloat(v.lAnt) || 0) + (parseFloat(v.lPm) || 0) + (parseFloat(v.lPl) || 0);
+          const compR = len > 0 ? (sumR / (3 * len)) * 100 : 0;
+          const compL = len > 0 ? (sumL / (3 * len)) * 100 : 0;
+          const antDiff = Math.abs((parseFloat(v.rAnt) || 0) - (parseFloat(v.lAnt) || 0));
+          return [
+            { label: "Score Composto Direito", value: `${compR.toFixed(1)}%`, highlight: true },
+            { label: "Score Composto Esquerdo", value: `${compL.toFixed(1)}%`, highlight: true },
+            { label: "Assimetria Anterior", value: `${antDiff.toFixed(1)} cm ${antDiff > 4 ? "(Risco >4cm)" : "(Normal ≤4cm)"}` },
+            { label: "Risco Global (<94%)", value: Math.min(compR, compL) >= 94 ? "Baixo Risco" : "Atenção Preventiva" }
+          ];
+        }
+      },
+      {
+        id: "rotacao_quadril",
+        name: "ROTAÇÃO DE QUADRIL",
+        category: "Agilidade, Estabilidade & Mobilidade",
+        icon: "rotate-cw",
+        description: "Goniometria de Rotação Interna (RI) e Rotação Externa (RE) do quadril bilateral para prevenção de pubalgia e lesões de adutores.",
+        fields: [
+          { key: "rInt", label: "Rotação Interna Direita (°)", type: "number", step: "1", default: 36 },
+          { key: "rExt", label: "Rotação Externa Direita (°)", type: "number", step: "1", default: 44 },
+          { key: "lInt", label: "Rotação Interna Esquerda (°)", type: "number", step: "1", default: 33 },
+          { key: "lExt", label: "Rotação Externa Esquerda (°)", type: "number", step: "1", default: 42 }
+        ],
+        calculate: (v) => {
+          const ri = parseFloat(v.rInt) || 0;
+          const re = parseFloat(v.rExt) || 0;
+          const li = parseFloat(v.lInt) || 0;
+          const le = parseFloat(v.lExt) || 0;
+          const arcR = ri + re;
+          const arcL = li + le;
+          const diffTotal = Math.abs(arcR - arcL);
+          return [
+            { label: "Arco Total Direito", value: `${arcR}° (RI ${ri}° / RE ${re}°)`, highlight: true },
+            { label: "Arco Total Esquerdo", value: `${arcL}° (RI ${li}° / RE ${le}°)`, highlight: true },
+            { label: "Diferença Bilateral", value: `${diffTotal}° ${diffTotal > 10 ? "(Restrição Assimétrica)" : "(Simétrico)"}` }
+          ];
+        }
+      }
+    ];
+
+    // ---------------------------------------------------------
+    // 2. STATE & STORAGE MANAGEMENT (localStorage + IndexedDB)
+    // ---------------------------------------------------------
+    const STORAGE_KEYS = {
+      THEME: "thg_perf_theme",
+      ATHLETES: "thg_perf_athletes",
+      SELECTED_ATHLETE: "thg_perf_selected_athlete",
+      RECORDS: "thg_perf_records",
+      CUSTOM_PROTOCOLS: "thg_perf_custom_protocols",
+      VIDEO_META: "thg_perf_video_meta"
+    };
+
+    let state = {
+      theme: localStorage.getItem(STORAGE_KEYS.THEME) || "dark",
+      activeTab: "dashboard",
+      selectedCategoryFilter: "ALL",
+      athletes: [],
+      selectedAthleteId: null,
+      records: [],
+      customProtocols: [],
+      videos: [],
+      activeEvalProtocol: null,
+      activeVideoUrl: null
+    };
+
+    // IndexedDB Helper for Persistent MP4 Blobs
+    const DB_NAME = "THG_PERFORMANCE_VIDEOS_DB";
+    const STORE_NAME = "mp4_files";
+
+    function openVideoDB() {
+      return new Promise((resolve, reject) => {
+        const req = indexedDB.open(DB_NAME, 1);
+        req.onupgradeneeded = (e) => {
+          const db = e.target.result;
+          if (!db.objectStoreNames.contains(STORE_NAME)) {
+            db.createObjectStore(STORE_NAME, { keyPath: "id" });
+          }
+        };
+        req.onsuccess = () => resolve(req.result);
+        req.onerror = () => reject(req.error);
+      });
+    }
+
+    async function saveVideoBlobToDB(id, blob) {
+      const db = await openVideoDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, "readwrite");
+        tx.objectStore(STORE_NAME).put({ id, blob });
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      });
+    }
+
+    async function getVideoBlobFromDB(id) {
+      const db = await openVideoDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, "readonly");
+        const req = tx.objectStore(STORE_NAME).get(id);
+        req.onsuccess = () => resolve(req.result ? req.result.blob : null);
+        req.onerror = () => reject(req.error);
+      });
+    }
+
+    async function deleteVideoBlobFromDB(id) {
+      const db = await openVideoDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, "readwrite");
+        tx.objectStore(STORE_NAME).delete(id);
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      });
+    }
+
+    function initDefaultData() {
+      const savedAthletes = localStorage.getItem(STORAGE_KEYS.ATHLETES);
+      if (savedAthletes) {
+        state.athletes = JSON.parse(savedAthletes);
+      } else {
+        state.athletes = [
+          { id: "ath_1", name: "Lucas Andrade", position: "Meia", age: 23, weight: 74.5, height: 179 },
+          { id: "ath_2", name: "Rafael Costa", position: "Atacante", age: 21, weight: 78.0, height: 183 },
+          { id: "ath_3", name: "Matheus Silva", position: "Zagueiro", age: 26, weight: 84.2, height: 189 }
+        ];
+        localStorage.setItem(STORAGE_KEYS.ATHLETES, JSON.stringify(state.athletes));
+      }
+
+      const savedSel = localStorage.getItem(STORAGE_KEYS.SELECTED_ATHLETE);
+      state.selectedAthleteId = (savedSel && state.athletes.some(a => a.id === savedSel))
+        ? savedSel
+        : (state.athletes[0]?.id || null);
+
+      const savedCustom = localStorage.getItem(STORAGE_KEYS.CUSTOM_PROTOCOLS);
+      state.customProtocols = savedCustom ? JSON.parse(savedCustom) : [];
+
+      const savedVideos = localStorage.getItem(STORAGE_KEYS.VIDEO_META);
+      state.videos = savedVideos ? JSON.parse(savedVideos) : [];
+
+      const savedRecords = localStorage.getItem(STORAGE_KEYS.RECORDS);
+      if (savedRecords) {
+        state.records = JSON.parse(savedRecords);
+      } else {
+        // Seed initial sample records so dashboard charts look rich immediately
+        const today = new Date().toISOString().split("T")[0];
+        state.records = [
+          {
+            id: "rec_init_1",
+            athleteId: "ath_1",
+            protocolId: "rsi_bilateral",
+            protocolName: "RSI",
+            category: "Potência & Pliometria (Saltos)",
+            date: today,
+            inputs: { jumpHeightCm: 38.0, contactTimeMs: 178 },
+            results: [
+              { label: "RSI (m/s)", value: "2.13", highlight: true },
+              { label: "Classificação Reativa", value: "Excelente (>2.0)", highlight: true }
+            ],
+            notes: "Pré-temporada — excelente rigidez reativa."
+          },
+          {
+            id: "rec_init_2",
+            athleteId: "ath_1",
+            protocolId: "cooper_12_min",
+            protocolName: "COOPER 12 MINUTOS",
+            category: "Velocidade & Resistência Aeróbia/Anaeróbia",
+            date: today,
+            inputs: { distance: 3180 },
+            results: [
+              { label: "VO2máx Estimado", value: "59.8 ml/kg/min", highlight: true },
+              { label: "Nível Condicionamento", value: "Excelente Futebol (>58 ml/kg/min)", highlight: true }
+            ],
+            notes: "Ritmo constante durante os 12 minutos."
+          }
+        ];
+        localStorage.setItem(STORAGE_KEYS.RECORDS, JSON.stringify(state.records));
+      }
+    }
+
+    // ---------------------------------------------------------
+    // 3. THEME & NAVIGATION
+    // ---------------------------------------------------------
+    function applyTheme(theme) {
+      state.theme = theme;
+      localStorage.setItem(STORAGE_KEYS.THEME, theme);
+      const html = document.documentElement;
+      const icon = document.getElementById("theme-icon");
+      const label = document.getElementById("theme-label");
+      const meta = document.getElementById("meta-theme-color");
+
+      if (theme === "light") {
+        html.classList.add("theme-light");
+        if (label) label.textContent = "Claro Performance";
+        if (icon) icon.setAttribute("data-lucide", "moon");
+        if (meta) meta.setAttribute("content", "#F4F5F7");
+      } else {
+        html.classList.remove("theme-light");
+        if (label) label.textContent = "Preto & Dourado";
+        if (icon) icon.setAttribute("data-lucide", "sun");
+        if (meta) meta.setAttribute("content", "#09090B");
+      }
+      lucide.createIcons();
+    }
+
+    function toggleTheme() {
+      applyTheme(state.theme === "dark" ? "light" : "dark");
+      showToast(state.theme === "dark" ? "Tema Preto & Dourado ativado" : "Tema Claro Performance ativado");
+    }
+
+    function switchTab(tabName) {
+      state.activeTab = tabName;
+      document.querySelectorAll(".tab-section").forEach(sec => sec.classList.add("hidden"));
+      const activeSec = document.getElementById(`tab-${tabName}`);
+      if (activeSec) activeSec.classList.remove("hidden");
+
+      // Desktop nav styling
+      document.querySelectorAll(".nav-btn").forEach(btn => {
+        const isTarget = btn.dataset.nav === tabName;
+        if (isTarget) {
+          btn.style.background = "var(--accent-gold-bg)";
+          btn.style.color = "var(--accent-gold)";
+          btn.style.border = "1px solid var(--border-strong)";
+        } else {
+          btn.style.background = "transparent";
+          btn.style.color = "var(--text-secondary)";
+          btn.style.border = "1px solid transparent";
+        }
+      });
+
+      // Mobile nav styling
+      document.querySelectorAll(".nav-btn-mobile").forEach(btn => {
+        const isTarget = btn.dataset.nav === tabName;
+        btn.style.color = isTarget ? "var(--accent-gold)" : "var(--text-muted)";
+        btn.style.background = isTarget ? "var(--accent-gold-bg)" : "transparent";
+      });
+
+      if (tabName === "dashboard") renderDashboard();
+      if (tabName === "avaliacoes") renderEvaluationsCatalog();
+      if (tabName === "videos") renderVideoLibrary();
+      if (tabName === "atletas") renderAthletesAndHistory();
+
+      lucide.createIcons();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function showToast(message) {
+      const container = document.getElementById("toast-container");
+      const toast = document.createElement("div");
+      toast.className = "thg-card thg-card-highlight px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold flex items-center gap-2.5 shadow-2xl animate-enter pointer-events-auto";
+      toast.innerHTML = `<i data-lucide="sparkles" class="w-4 h-4 flex-shrink-0" style="color: var(--accent-gold);"></i><span>${message}</span>`;
+      container.appendChild(toast);
+      lucide.createIcons();
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateY(-8px)";
+        toast.style.transition = "all 0.25s ease";
+        setTimeout(() => toast.remove(), 260);
+      }, 3000);
+    }
+
+    // ---------------------------------------------------------
+    // 4. ATHLETE MANAGEMENT
+    // ---------------------------------------------------------
+    function getSelectedAthlete() {
+      return state.athletes.find(a => a.id === state.selectedAthleteId) || state.athletes[0] || null;
+    }
+
+    function renderGlobalAthleteSelector() {
+      const select = document.getElementById("global-athlete-select");
+      const meta = document.getElementById("global-athlete-meta");
+      if (!select) return;
+
+      select.innerHTML = state.athletes.map(a =>
+        `<option value="${a.id}" ${a.id === state.selectedAthleteId ? "selected" : ""}>${a.name} (${a.position})</option>`
+      ).join("");
+
+      const current = getSelectedAthlete();
+      if (current && meta) {
+        meta.textContent = `${current.age} anos • ${current.weight} kg • ${current.height} cm`;
+      } else if (meta) {
+        meta.textContent = "Nenhum atleta cadastrado";
+      }
+    }
+
+    function selectGlobalAthlete(id) {
+      state.selectedAthleteId = id;
+      localStorage.setItem(STORAGE_KEYS.SELECTED_ATHLETE, id);
+      renderGlobalAthleteSelector();
+      if (state.activeTab === "dashboard") renderDashboard();
+      if (state.activeTab === "atletas") renderAthletesAndHistory();
+    }
+
+    function openNewAthleteModal() {
+      document.getElementById("new-athlete-modal").classList.remove("hidden");
+      document.getElementById("new-athlete-modal").classList.add("flex");
+    }
+
+    function closeNewAthleteModal() {
+      document.getElementById("new-athlete-modal").classList.add("hidden");
+      document.getElementById("new-athlete-modal").classList.remove("flex");
+    }
+
+    function saveNewAthlete() {
+      const name = document.getElementById("athlete-name-input").value.trim();
+      if (!name) {
+        showToast("Informe o nome completo do atleta.");
+        return;
+      }
+      const newAth = {
+        id: "ath_" + Date.now(),
+        name,
+        position: document.getElementById("athlete-position-input").value,
+        age: parseInt(document.getElementById("athlete-age-input").value) || 20,
+        weight: parseFloat(document.getElementById("athlete-weight-input").value) || 75,
+        height: parseInt(document.getElementById("athlete-height-input").value) || 178
+      };
+      state.athletes.push(newAth);
+      state.selectedAthleteId = newAth.id;
+      localStorage.setItem(STORAGE_KEYS.ATHLETES, JSON.stringify(state.athletes));
+      localStorage.setItem(STORAGE_KEYS.SELECTED_ATHLETE, newAth.id);
+
+      document.getElementById("athlete-name-input").value = "";
+      closeNewAthleteModal();
+      renderGlobalAthleteSelector();
+      renderDashboard();
+      if (state.activeTab === "atletas") renderAthletesAndHistory();
+      showToast(`Atleta ${newAth.name} cadastrado com sucesso!`);
+    }
+
+    function deleteAthlete(id) {
+      if (state.athletes.length <= 1) {
+        showToast("Mantenha pelo menos 1 atleta ativo no elenco.");
+        return;
+      }
+      state.athletes = state.athletes.filter(a => a.id !== id);
+      state.records = state.records.filter(r => r.athleteId !== id);
+      if (state.selectedAthleteId === id) {
+        state.selectedAthleteId = state.athletes[0].id;
+      }
+      localStorage.setItem(STORAGE_KEYS.ATHLETES, JSON.stringify(state.athletes));
+      localStorage.setItem(STORAGE_KEYS.RECORDS, JSON.stringify(state.records));
+      localStorage.setItem(STORAGE_KEYS.SELECTED_ATHLETE, state.selectedAthleteId);
+      renderGlobalAthleteSelector();
+      renderAthletesAndHistory();
+      renderDashboard();
+      showToast("Atleta removido do elenco.");
+    }
+
+    // ---------------------------------------------------------
+    // 5. ALL PROTOCOLS (BUILTIN + CUSTOM) & EVALUATION EXECUTION
+    // ---------------------------------------------------------
+    function getAllProtocols() {
+      const hydratedCustom = state.customProtocols.map(cp => ({
+        ...cp,
+        isCustom: true,
+        icon: "sparkles",
+        calculate: (vals) => {
+          const numEntries = cp.fields
+            .filter(f => f.type === "number")
+            .map(f => ({ label: f.label, val: parseFloat(vals[f.key]) || 0 }));
+
+          if (cp.calcMode === "asymmetry" && numEntries.length >= 2) {
+            const a = numEntries[0].val;
+            const b = numEntries[1].val;
+            const max = Math.max(a, b);
+            const asym = max > 0 ? ((Math.abs(a - b) / max) * 100) : 0;
+            return [
+              { label: "Assimetria Calculada", value: `${asym.toFixed(1)}%`, highlight: true },
+              { label: "Diferença Absoluta", value: `${Math.abs(a - b).toFixed(2)}`, highlight: true }
+            ];
+          }
+          if (cp.calcMode === "average" && numEntries.length > 0) {
+            const avg = numEntries.reduce((s, x) => s + x.val, 0) / numEntries.length;
+            return [{ label: "Média Geral", value: avg.toFixed(2), highlight: true }];
+          }
+          if (cp.calcMode === "sum" && numEntries.length > 0) {
+            const sum = numEntries.reduce((s, x) => s + x.val, 0);
+            return [{ label: "Soma Total", value: sum.toFixed(2), highlight: true }];
+          }
+          return cp.fields.map(f => ({
+            label: f.label,
+            value: `${vals[f.key] ?? "-"}`,
+            highlight: true
+          }));
+        }
+      }));
+      return [...BUILTIN_PROTOCOLS, ...hydratedCustom];
+    }
+
+    function renderEvaluationsCatalog() {
+      const all = getAllProtocols();
+      const search = (document.getElementById("eval-search-input")?.value || "").toLowerCase().trim();
+      const categories = ["ALL", ...new Set(all.map(p => p.category))];
+
+      // Render Category Pills
+      const pillsEl = document.getElementById("category-filter-pills");
+      if (pillsEl) {
+        pillsEl.innerHTML = categories.map(cat => {
+          const active = state.selectedCategoryFilter === cat;
+          const label = cat === "ALL" ? "Todas as Categorias" : cat;
+          return `<button onclick="setCategoryFilter('${cat.replace(/'/g, "\\'")}')" class="px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap border transition-all" style="${active ? 'background: var(--accent-gold); color: #09090B; border-color: var(--accent-gold);' : 'background: var(--bg-card); color: var(--text-secondary); border-color: var(--border-subtle);'}">${label}</button>`;
+        }).join("");
+      }
+
+      // Filter protocols
+      const filtered = all.filter(p => {
+        const matchCat = state.selectedCategoryFilter === "ALL" || p.category === state.selectedCategoryFilter;
+        const matchText = !search || p.name.toLowerCase().includes(search) || p.category.toLowerCase().includes(search) || p.description.toLowerCase().includes(search);
+        return matchCat && matchText;
+      });
+
+      // Group by category
+      const grouped = {};
+      filtered.forEach(p => {
+        if (!grouped[p.category]) grouped[p.category] = [];
+        grouped[p.category].push(p);
+      });
+
+      const container = document.getElementById("evaluations-catalog-container");
+      if (!container) return;
+
+      if (Object.keys(grouped).length === 0) {
+        container.innerHTML = `<div class="thg-card rounded-2xl p-8 text-center">
+          <p class="font-bold text-base">Nenhuma avaliação encontrada para "${search}".</p>
+          <p class="text-xs mt-1 mb-4" style="color: var(--text-secondary);">Você pode criar este protocolo agora mesmo clicando no botão abaixo.</p>
+          <button onclick="openCustomEvalBuilder()" class="gold-btn px-4 py-2 rounded-xl text-xs">Criar Avaliação Personalizada</button>
+        </div>`;
+        return;
+      }
+
+      container.innerHTML = Object.entries(grouped).map(([catName, tests]) => `
+        <div class="space-y-3">
+          <div class="flex items-center justify-between border-b pb-2" style="border-color: var(--border-subtle);">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full" style="background: var(--accent-gold);"></span>
+              <h3 class="font-display text-xl font-bold tracking-wide uppercase">${catName}</h3>
+            </div>
+            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full" style="background: var(--accent-gold-bg); color: var(--accent-gold);">${tests.length} testes</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+            ${tests.map(t => `
+              <div class="thg-card rounded-2xl p-4 flex flex-col justify-between transition-all hover:translate-y-[-2px]" style="border-color: var(--border-subtle);">
+                <div>
+                  <div class="flex items-start justify-between gap-2 mb-2.5">
+                    <div class="p-2.5 rounded-xl" style="background: var(--accent-gold-bg); color: var(--accent-gold);">
+                      <i data-lucide="${t.icon || 'activity'}" class="w-5 h-5"></i>
+                    </div>
+                    ${t.isCustom ? `
+                      <button onclick="deleteCustomProtocol('${t.id}')" title="Excluir Avaliação Personalizada" class="p-1.5 rounded-lg text-red-400 hover:bg-red-500/10">
+                        <i data-lucide="trash-2" class="w-4 h-4"></i>
+                      </button>
+                    ` : `<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md" style="background: var(--bg-input); color: var(--text-muted);">Protocolo THG</span>`}
+                  </div>
+                  <h4 class="font-display text-lg font-bold tracking-wide">${t.name}</h4>
+                  <p class="text-xs mt-1 line-clamp-2" style="color: var(--text-secondary);">${t.description}</p>
+                </div>
+
+                <button onclick="openEvalModal('${t.id}')" class="gold-btn w-full mt-4 py-2.5 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5">
+                  <i data-lucide="play" class="w-3.5 h-3.5"></i> Iniciar Avaliação
+                </button>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      `).join("");
+
+      lucide.createIcons();
+    }
+
+    function setCategoryFilter(cat) {
+      state.selectedCategoryFilter = cat;
+      renderEvaluationsCatalog();
+    }
+
+    function openEvalModal(protocolId) {
+      const protocol = getAllProtocols().find(p => p.id === protocolId);
+      if (!protocol) return;
+      state.activeEvalProtocol = protocol;
+
+      document.getElementById("eval-modal-category").textContent = protocol.category;
+      document.getElementById("eval-modal-title").textContent = protocol.name;
+      document.getElementById("eval-modal-desc").textContent = protocol.description;
+      document.getElementById("eval-modal-date").value = new Date().toISOString().split("T")[0];
+      document.getElementById("eval-modal-notes").value = "";
+
+      const athSelect = document.getElementById("eval-modal-athlete");
+      athSelect.innerHTML = state.athletes.map(a =>
+        `<option value="${a.id}" ${a.id === state.selectedAthleteId ? "selected" : ""}>${a.name} (${a.weight} kg)</option>`
+      ).join("");
+
+      const fieldsContainer = document.getElementById("eval-modal-fields");
+      fieldsContainer.innerHTML = protocol.fields.map(f => `
+        <div>
+          <label class="block text-xs font-semibold mb-1" style="color: var(--text-secondary);">${f.label}</label>
+          <input
+            type="${f.type || 'number'}"
+            step="${f.step || 'any'}"
+            data-field-key="${f.key}"
+            value="${f.default !== undefined ? f.default : ''}"
+            oninput="recalculateActiveEvaluation()"
+            class="eval-field-input thg-input w-full rounded-xl px-3 py-2.5 text-sm font-semibold"
+          />
+        </div>
+      `).join("");
+
+      recalculateActiveEvaluation();
+      document.getElementById("eval-modal").classList.remove("hidden");
+      document.getElementById("eval-modal").classList.add("flex");
+      lucide.createIcons();
+    }
+
+    function closeEvalModal() {
+      document.getElementById("eval-modal").classList.add("hidden");
+      document.getElementById("eval-modal").classList.remove("flex");
+      state.activeEvalProtocol = null;
+    }
+
+    function getModalFieldValues() {
+      const vals = {};
+      document.querySelectorAll(".eval-field-input").forEach(inp => {
+        vals[inp.dataset.fieldKey] = inp.value;
+      });
+      return vals;
+    }
+
+    function recalculateActiveEvaluation() {
+      if (!state.activeEvalProtocol) return;
+      const vals = getModalFieldValues();
+      const athId = document.getElementById("eval-modal-athlete").value;
+      const athlete = state.athletes.find(a => a.id === athId) || getSelectedAthlete();
+      const results = state.activeEvalProtocol.calculate(vals, athlete);
+
+      const box = document.getElementById("eval-modal-live-results");
+      box.innerHTML = results.map(r => `
+        <div class="p-2.5 rounded-xl border" style="background: var(--bg-card); border-color: ${r.highlight ? 'var(--border-strong)' : 'var(--border-subtle)'};">
+          <span class="block text-[11px]" style="color: var(--text-secondary);">${r.label}</span>
+          <span class="font-display font-bold text-base sm:text-lg" style="color: ${r.highlight ? 'var(--accent-gold)' : 'var(--text-primary)'};">${r.value}</span>
+        </div>
+      `).join("");
+    }
+
+    function saveEvaluationResult() {
+      if (!state.activeEvalProtocol) return;
+      const athId = document.getElementById("eval-modal-athlete").value;
+      const athlete = state.athletes.find(a => a.id === athId);
+      const vals = getModalFieldValues();
+      const results = state.activeEvalProtocol.calculate(vals, athlete);
+
+      const newRecord = {
+        id: "rec_" + Date.now(),
+        athleteId: athId,
+        protocolId: state.activeEvalProtocol.id,
+        protocolName: state.activeEvalProtocol.name,
+        category: state.activeEvalProtocol.category,
+        date: document.getElementById("eval-modal-date").value || new Date().toISOString().split("T")[0],
+        inputs: vals,
+        results,
+        notes: document.getElementById("eval-modal-notes").value.trim()
+      };
+
+      state.records.unshift(newRecord);
+      localStorage.setItem(STORAGE_KEYS.RECORDS, JSON.stringify(state.records));
+
+      closeEvalModal();
+      renderDashboard();
+      if (state.activeTab === "atletas") renderAthletesAndHistory();
+      showToast(`Avaliação "${newRecord.protocolName}" salva para ${athlete?.name || "atleta"}!`);
+    }
+
+    // ---------------------------------------------------------
+    // 6. CUSTOM EVALUATION BUILDER
+    // ---------------------------------------------------------
+    function openCustomEvalBuilder() {
+      const categories = [...new Set(getAllProtocols().map(p => p.category))];
+      document.getElementById("existing-categories-list").innerHTML = categories.map(c => `<option value="${c}"></option>`).join("");
+
+      document.getElementById("custom-eval-name").value = "";
+      document.getElementById("custom-eval-category").value = "";
+      document.getElementById("custom-eval-desc").value = "";
+      document.getElementById("custom-builder-fields-list").innerHTML = "";
+
+      addCustomBuilderFieldRow("Medida 1 (ex: Tempo em segundos)", "number");
+      addCustomBuilderFieldRow("Medida 2 (opcional)", "number");
+
+      document.getElementById("custom-eval-modal").classList.remove("hidden");
+      document.getElementById("custom-eval-modal").classList.add("flex");
+      lucide.createIcons();
+    }
+
+    function closeCustomEvalBuilder() {
+      document.getElementById("custom-eval-modal").classList.add("hidden");
+      document.getElementById("custom-eval-modal").classList.remove("flex");
+    }
+
+    function addCustomBuilderFieldRow(defaultLabel = "", defaultType = "number") {
+      const list = document.getElementById("custom-builder-fields-list");
+      const row = document.createElement("div");
+      row.className = "custom-builder-row flex items-center gap-2";
+      row.innerHTML = `
+        <input type="text" placeholder="Nome do campo e unidade (ex: Distância cm)" value="${defaultLabel}" class="builder-field-label thg-input flex-1 rounded-xl px-3 py-2 text-xs font-semibold" />
+        <select class="builder-field-type thg-input rounded-xl px-2.5 py-2 text-xs">
+          <option value="number" ${defaultType === 'number' ? 'selected' : ''}>Número</option>
+          <option value="text" ${defaultType === 'text' ? 'selected' : ''}>Texto</option>
+        </select>
+        <button type="button" onclick="this.parentElement.remove()" class="p-2 rounded-xl text-red-400 hover:bg-red-500/10">
+          <i data-lucide="trash-2" class="w-4 h-4"></i>
+        </button>
+      `;
+      list.appendChild(row);
+      lucide.createIcons();
+    }
+
+    function saveCustomEvaluationProtocol() {
+      const name = document.getElementById("custom-eval-name").value.trim().toUpperCase();
+      const category = document.getElementById("custom-eval-category").value.trim() || "Avaliações Personalizadas";
+      const description = document.getElementById("custom-eval-desc").value.trim() || "Protocolo personalizado criado pelo preparador físico.";
+      const calcMode = document.getElementById("custom-eval-calc-mode").value;
+
+      if (!name) {
+        showToast("Digite um nome para a nova avaliação.");
+        return;
+      }
+
+      const fields = [];
+      document.querySelectorAll(".custom-builder-row").forEach((row, idx) => {
+        const label = row.querySelector(".builder-field-label").value.trim();
+        const type = row.querySelector(".builder-field-type").value;
+        if (label) {
+          fields.push({
+            key: `field_${idx + 1}`,
+            label,
+            type,
+            default: type === "number" ? 0 : ""
+          });
+        }
+      });
+
+      if (fields.length === 0) {
+        showToast("Adicione pelo menos 1 campo de medição.");
+        return;
+      }
+
+      const newProtocol = {
+        id: "custom_" + Date.now(),
+        name,
+        category,
+        description,
+        calcMode,
+        fields
+      };
+
+      state.customProtocols.push(newProtocol);
+      localStorage.setItem(STORAGE_KEYS.CUSTOM_PROTOCOLS, JSON.stringify(state.customProtocols));
+
+      closeCustomEvalBuilder();
+      renderEvaluationsCatalog();
+      renderDashboard();
+      showToast(`Avaliação "${name}" adicionada na categoria "${category}"!`);
+    }
+
+    function deleteCustomProtocol(id) {
+      state.customProtocols = state.customProtocols.filter(p => p.id !== id);
+      localStorage.setItem(STORAGE_KEYS.CUSTOM_PROTOCOLS, JSON.stringify(state.customProtocols));
+      renderEvaluationsCatalog();
+      renderDashboard();
+      showToast("Avaliação personalizada removida.");
+    }
+
+    // ---------------------------------------------------------
+    // 7. MP4 VIDEO LIBRARY (INDEXEDDB + SLOW-MOTION PLAYER)
+    // ---------------------------------------------------------
+    function openAddVideoModal() {
+      document.getElementById("video-title-input").value = "";
+      document.getElementById("video-file-input").value = "";
+      document.getElementById("video-notes-input").value = "";
+      document.getElementById("add-video-modal").classList.remove("hidden");
+      document.getElementById("add-video-modal").classList.add("flex");
+    }
+
+    function closeAddVideoModal() {
+      document.getElementById("add-video-modal").classList.add("hidden");
+      document.getElementById("add-video-modal").classList.remove("flex");
+    }
+
+    async function saveUploadedVideo() {
+      const fileInput = document.getElementById("video-file-input");
+      const file = fileInput.files[0];
+      if (!file) {
+        showToast("Selecione um arquivo de vídeo .MP4 do seu dispositivo.");
+        return;
+      }
+
+      const title = document.getElementById("video-title-input").value.trim() || file.name.replace(/\.[^/.]+$/, "");
+      const category = document.getElementById("video-category-input").value;
+      const notes = document.getElementById("video-notes-input").value.trim();
+
+      const btn = document.getElementById("save-video-btn");
+      btn.disabled = true;
+      btn.textContent = "Salvando MP4...";
+
+      try {
+        const videoId = "vid_" + Date.now();
+        await saveVideoBlobToDB(videoId, file);
+
+        const meta = {
+          id: videoId,
+          title,
+          category,
+          notes,
+          fileName: file.name,
+          sizeMB: (file.size / (1024 * 1024)).toFixed(1),
+          createdAt: new Date().toLocaleDateString("pt-BR")
+        };
+
+        state.videos.unshift(meta);
+        localStorage.setItem(STORAGE_KEYS.VIDEO_META, JSON.stringify(state.videos));
+
+        closeAddVideoModal();
+        renderVideoLibrary();
+        renderDashboard();
+        showToast(`Vídeo "${title}" salvo na biblioteca MP4!`);
+      } catch (err) {
+        console.error(err);
+        showToast("Erro ao salvar vídeo no armazenamento local.");
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i data-lucide="check" class="w-4 h-4"></i> Salvar Vídeo MP4`;
+        lucide.createIcons();
+      }
+    }
+
+    async function handleQuickFileDrop(event) {
+      const files = Array.from(event.target.files || []);
+      if (files.length === 0) return;
+
+      for (const file of files) {
+        const videoId = "vid_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
+        await saveVideoBlobToDB(videoId, file);
+        state.videos.unshift({
+          id: videoId,
+          title: file.name.replace(/\.[^/.]+$/, ""),
+          category: "Execução de Testes",
+          notes: "Importado diretamente para análise técnica.",
+          fileName: file.name,
+          sizeMB: (file.size / (1024 * 1024)).toFixed(1),
+          createdAt: new Date().toLocaleDateString("pt-BR")
+        });
+      }
+
+      localStorage.setItem(STORAGE_KEYS.VIDEO_META, JSON.stringify(state.videos));
+      event.target.value = "";
+      renderVideoLibrary();
+      renderDashboard();
+      showToast(`${files.length} vídeo(s) MP4 adicionado(s) com sucesso!`);
+    }
+
+    // Drag & Drop listeners
+    const dropZone = document.getElementById("mp4-dropzone");
+    if (dropZone) {
+      dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.style.transform = "scale(1.01)";
+      });
+      dropZone.addEventListener("dragleave", () => {
+        dropZone.style.transform = "scale(1)";
+      });
+      dropZone.addEventListener("drop", async (e) => {
+        e.preventDefault();
+        dropZone.style.transform = "scale(1)";
+        if (e.dataTransfer?.files?.length) {
+          await handleQuickFileDrop({ target: { files: e.dataTransfer.files } });
+        }
+      });
+    }
+
+    function renderVideoLibrary() {
+      const grid = document.getElementById("videos-grid");
+      if (!grid) return;
+
+      const search = (document.getElementById("video-search-input")?.value || "").toLowerCase().trim();
+      const catFilter = document.getElementById("video-category-filter")?.value || "ALL";
+
+      const filtered = state.videos.filter(v => {
+        const matchCat = catFilter === "ALL" || v.category === catFilter;
+        const matchSearch = !search || v.title.toLowerCase().includes(search) || (v.notes || "").toLowerCase().includes(search);
+        return matchCat && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full thg-card rounded-2xl p-8 text-center">
+            <i data-lucide="film" class="w-10 h-10 mx-auto mb-2" style="color: var(--accent-gold);"></i>
+            <p class="font-bold text-base">Nenhum vídeo MP4 encontrado</p>
+            <p class="text-xs mt-1" style="color: var(--text-secondary);">Clique em "Adicionar Vídeo MP4" acima para carregar seus vídeos de treino, saltos ou testes físicos.</p>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      grid.innerHTML = filtered.map(v => `
+        <div class="thg-card rounded-2xl overflow-hidden flex flex-col justify-between">
+          <div onclick="playStoredVideo('${v.id}')" class="relative h-40 bg-zinc-950 flex items-center justify-center cursor-pointer group border-b" style="border-color: var(--border-subtle);">
+            <div class="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_center,_#F5C518_0%,_transparent_70%)]"></div>
+            <div class="w-14 h-14 rounded-full flex items-center justify-center gold-btn group-hover:scale-110 transition-transform">
+              <i data-lucide="play" class="w-6 h-6 ml-0.5"></i>
+            </div>
+            <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-black/80 text-amber-400 border border-amber-400/40">
+              ${v.category}
+            </span>
+            <span class="absolute bottom-2.5 right-3 text-[11px] font-semibold px-2 py-0.5 rounded bg-black/75 text-zinc-300">
+              MP4 • ${v.sizeMB} MB
+            </span>
+          </div>
+
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-display text-lg font-bold leading-snug">${v.title}</h4>
+              <p class="text-xs mt-1 line-clamp-2" style="color: var(--text-secondary);">${v.notes || "Sem observações adicionais."}</p>
+            </div>
+
+            <div class="flex items-center justify-between mt-4 pt-3 border-t text-xs" style="border-color: var(--border-subtle); color: var(--text-muted);">
+              <span>Adicionado em ${v.createdAt}</span>
+              <div class="flex items-center gap-2">
+                <button onclick="playStoredVideo('${v.id}')" class="font-bold" style="color: var(--accent-gold);">Assistir</button>
+                <button onclick="deleteStoredVideo('${v.id}')" class="text-red-400 hover:underline">Excluir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join("");
+
+      lucide.createIcons();
+    }
+
+    async function playStoredVideo(videoId) {
+      const meta = state.videos.find(v => v.id === videoId);
+      if (!meta) return;
+
+      const blob = await getVideoBlobFromDB(videoId);
+      if (!blob) {
+        showToast("Arquivo de vídeo não encontrado no armazenamento local.");
+        return;
+      }
+
+      if (state.activeVideoUrl) {
+        URL.revokeObjectURL(state.activeVideoUrl);
+      }
+      state.activeVideoUrl = URL.createObjectURL(blob);
+
+      const videoEl = document.getElementById("thg-video-element");
+      videoEl.src = state.activeVideoUrl;
+      videoEl.playbackRate = 1;
+      videoEl.loop = false;
+
+      document.getElementById("player-video-category").textContent = meta.category;
+      document.getElementById("player-video-title").textContent = meta.title;
+      document.getElementById("player-video-notes").textContent = meta.notes || "Dica: Utilize os controles de velocidade (0.25x / 0.5x) para analisar ângulos articulares e tempo de contato.";
+      document.getElementById("video-loop-status").textContent = "OFF";
+      highlightSpeedBtn(1);
+
+      document.getElementById("video-player-modal").classList.remove("hidden");
+      document.getElementById("video-player-modal").classList.add("flex");
+      videoEl.play().catch(() => {});
+    }
+
+    function closeVideoPlayer() {
+      const videoEl = document.getElementById("thg-video-element");
+      videoEl.pause();
+      videoEl.removeAttribute("src");
+      if (state.activeVideoUrl) {
+        URL.revokeObjectURL(state.activeVideoUrl);
+        state.activeVideoUrl = null;
+      }
+      document.getElementById("video-player-modal").classList.add("hidden");
+      document.getElementById("video-player-modal").classList.remove("flex");
+    }
+
+    function setVideoSpeed(rate) {
+      const videoEl = document.getElementById("thg-video-element");
+      videoEl.playbackRate = rate;
+      highlightSpeedBtn(rate);
+    }
+
+    function highlightSpeedBtn(rate) {
+      document.querySelectorAll(".speed-btn").forEach(btn => {
+        const isCurrent = parseFloat(btn.dataset.speed) === rate;
+        btn.style.background = isCurrent ? "var(--accent-gold)" : "var(--bg-input)";
+        btn.style.color = isCurrent ? "#09090B" : "var(--text-primary)";
+      });
+    }
+
+    function toggleVideoLoop() {
+      const videoEl = document.getElementById("thg-video-element");
+      videoEl.loop = !videoEl.loop;
+      document.getElementById("video-loop-status").textContent = videoEl.loop ? "ON" : "OFF";
+    }
+
+    async function deleteStoredVideo(videoId) {
+      await deleteVideoBlobFromDB(videoId);
+      state.videos = state.videos.filter(v => v.id !== videoId);
+      localStorage.setItem(STORAGE_KEYS.VIDEO_META, JSON.stringify(state.videos));
+      renderVideoLibrary();
+      renderDashboard();
+      showToast("Vídeo removido da biblioteca.");
+    }
+
+    // ---------------------------------------------------------
+    // 8. DASHBOARD & ATHLETE REPORTS RENDERING
+    // ---------------------------------------------------------
+    function renderDashboard() {
+      const allProtocols = getAllProtocols();
+      document.getElementById("kpi-athletes").textContent = state.athletes.length;
+      document.getElementById("kpi-evaluations").textContent = state.records.length;
+      document.getElementById("kpi-protocols").textContent = allProtocols.length;
+      document.getElementById("kpi-videos").textContent = state.videos.length;
+
+      // Category bars for active athlete
+      const ath = getSelectedAthlete();
+      const athRecords = state.records.filter(r => r.athleteId === ath?.id);
+      const cats = [...new Set(allProtocols.map(p => p.category))];
+
+      const barsEl = document.getElementById("dashboard-category-bars");
+      barsEl.innerHTML = cats.map(cat => {
+        const totalInCat = allProtocols.filter(p => p.category === cat).length;
+        const doneProtos = new Set(athRecords.filter(r => r.category === cat).map(r => r.protocolId)).size;
+        const pct = totalInCat > 0 ? Math.min(100, Math.round((doneProtos / totalInCat) * 100)) : 0;
+        return `
+          <div>
+            <div class="flex items-center justify-between text-xs font-semibold mb-1">
+              <span>${cat}</span>
+              <span style="color: var(--accent-gold);">${doneProtos}/${totalInCat} testes (${pct}%)</span>
+            </div>
+            <div class="w-full h-2.5 rounded-full overflow-hidden" style="background: var(--bg-input);">
+              <div class="h-full rounded-full transition-all duration-500" style="width: ${pct}%; background: linear-gradient(90deg, #B48A1E, #F5C518);"></div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      // Quick tests shortcuts
+      const featuredIds = ["teste_1rm", "rsi_bilateral", "cooper_12_min", "rast_test", "y_balance_test", "indice_forca_dinamica"];
+      const quickEl = document.getElementById("dashboard-quick-tests");
+      quickEl.innerHTML = featuredIds.map(id => {
+        const p = allProtocols.find(x => x.id === id);
+        if (!p) return "";
+        return `
+          <button onclick="openEvalModal('${p.id}')" class="p-3 rounded-xl border text-left transition-all hover:opacity-90 flex items-center gap-2.5" style="background: var(--bg-input); border-color: var(--border-subtle);">
+            <i data-lucide="${p.icon}" class="w-4 h-4 flex-shrink-0" style="color: var(--accent-gold);"></i>
+            <span class="text-xs font-bold leading-tight">${p.name}</span>
+          </button>
+        `;
+      }).join("");
+
+      // Recent evaluations feed
+      const recentEl = document.getElementById("dashboard-recent-list");
+      if (state.records.length === 0) {
+        recentEl.innerHTML = `<p class="text-xs text-center py-8" style="color: var(--text-muted);">Nenhuma avaliação registrada ainda.</p>`;
+      } else {
+        recentEl.innerHTML = state.records.slice(0, 6).map(r => {
+          const a = state.athletes.find(x => x.id === r.athleteId);
+          const mainRes = r.results?.[0];
+          return `
+            <div class="p-3 rounded-xl border" style="background: var(--bg-input); border-color: var(--border-subtle);">
+              <div class="flex items-center justify-between text-[11px]" style="color: var(--text-muted);">
+                <span class="font-bold" style="color: var(--accent-gold);">${a?.name || "Atleta"}</span>
+                <span>${r.date}</span>
+              </div>
+              <p class="font-display font-bold text-base mt-0.5">${r.protocolName}</p>
+              ${mainRes ? `<p class="text-xs mt-1 font-semibold">${mainRes.label}: <span style="color: var(--accent-gold);">${mainRes.value}</span></p>` : ""}
+            </div>
+          `;
+        }).join("");
+      }
+
+      lucide.createIcons();
+    }
+
+    function renderAthletesAndHistory() {
+      const rosterEl = document.getElementById("athletes-roster-grid");
+      rosterEl.innerHTML = state.athletes.map(a => {
+        const isSel = a.id === state.selectedAthleteId;
+        const count = state.records.filter(r => r.athleteId === a.id).length;
+        return `
+          <div onclick="selectGlobalAthlete('${a.id}')" class="thg-card rounded-2xl p-4 cursor-pointer transition-all ${isSel ? 'thg-card-highlight' : ''}">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl flex items-center justify-center font-display font-bold text-xl" style="background: var(--accent-gold-bg); color: var(--accent-gold);">
+                  ${a.name.charAt(0).toUpperCase()}
+                </div>
+                <div>
+                  <h4 class="font-display text-lg font-bold">${a.name}</h4>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded-md" style="background: var(--bg-input); color: var(--accent-gold);">${a.position}</span>
+                </div>
+              </div>
+              <button onclick="event.stopPropagation(); deleteAthlete('${a.id}')" title="Remover atleta" class="p-1.5 rounded-lg text-red-400 hover:bg-red-500/10">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="grid grid-cols-3 gap-2 mt-4 pt-3 border-t text-center text-xs" style="border-color: var(--border-subtle);">
+              <div><span class="block" style="color: var(--text-muted);">Idade</span><strong>${a.age}a</strong></div>
+              <div><span class="block" style="color: var(--text-muted);">Peso</span><strong>${a.weight}kg</strong></div>
+              <div><span class="block" style="color: var(--text-muted);">Testes</span><strong style="color: var(--accent-gold);">${count}</strong></div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      const current = getSelectedAthlete();
+      document.getElementById("history-athlete-subtitle").textContent = current
+        ? `Exibindo registros de ${current.name} (${current.position} • ${current.weight} kg • ${current.height} cm)`
+        : "";
+
+      const athRecords = state.records.filter(r => r.athleteId === current?.id);
+      const histEl = document.getElementById("athlete-history-list");
+
+      if (athRecords.length === 0) {
+        histEl.innerHTML = `<div class="text-center py-8">
+          <p class="text-sm font-semibold">Nenhuma avaliação registrada para ${current?.name || "este atleta"}.</p>
+          <button onclick="switchTab('avaliacoes')" class="gold-btn px-4 py-2 rounded-xl text-xs mt-3">Realizar Primeira Avaliação</button>
+        </div>`;
+      } else {
+        histEl.innerHTML = athRecords.map(r => `
+          <div class="p-4 rounded-2xl border space-y-2.5" style="background: var(--bg-input); border-color: var(--border-subtle);">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded" style="background: var(--accent-gold-bg); color: var(--accent-gold);">${r.category}</span>
+                <h4 class="font-display text-lg font-bold mt-1">${r.protocolName}</h4>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-semibold" style="color: var(--text-muted);">${r.date}</span>
+                <button onclick="deleteRecord('${r.id}')" class="text-xs text-red-400 hover:underline">Excluir</button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+              ${(r.results || []).map(res => `
+                <div class="p-2.5 rounded-xl border" style="background: var(--bg-card); border-color: var(--border-subtle);">
+                  <span class="block text-[10px]" style="color: var(--text-secondary);">${res.label}</span>
+                  <span class="font-display font-bold text-sm" style="color: ${res.highlight ? 'var(--accent-gold)' : 'var(--text-primary)'};">${res.value}</span>
+                </div>
+              `).join("")}
+            </div>
+            ${r.notes ? `<p class="text-xs italic" style="color: var(--text-secondary);">Obs: ${r.notes}</p>` : ""}
+          </div>
+        `).join("");
+      }
+
+      lucide.createIcons();
+    }
+
+    function deleteRecord(recId) {
+      state.records = state.records.filter(r => r.id !== recId);
+      localStorage.setItem(STORAGE_KEYS.RECORDS, JSON.stringify(state.records));
+      renderAthletesAndHistory();
+      renderDashboard();
+      showToast("Registro de avaliação excluído.");
+    }
+
+    function exportJsonReport() {
+      const payload = {
+        app: "THG PERFORMANCE",
+        exportedAt: new Date().toISOString(),
+        athletes: state.athletes,
+        customProtocols: state.customProtocols,
+        evaluations: state.records
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `THG_PERFORMANCE_Relatorio_${new Date().toISOString().split("T")[0]}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast("Backup JSON exportado com sucesso!");
+    }
+
+    function openPwaModal() {
+      document.getElementById("pwa-modal").classList.remove("hidden");
+      document.getElementById("pwa-modal").classList.add("flex");
+    }
+
+    function closePwaModal() {
+      document.getElementById("pwa-modal").classList.add("hidden");
+      document.getElementById("pwa-modal").classList.remove("flex");
+    }
+
+    // ---------------------------------------------------------
+    // 9. BOOTSTRAP APPLICATION
+    // ---------------------------------------------------------
+    window.addEventListener("DOMContentLoaded", () => {
+      initDefaultData();
+      applyTheme(state.theme);
+      renderGlobalAthleteSelector();
+      switchTab("dashboard");
+    });
+  </script>
+</body>
+</html>
+```
